@@ -12,7 +12,7 @@ private:
 
   void GetAttacked(Character* opponent);
 public:
-  Character(char* name,
+  Character(std::string name,
             unsigned int health,
             float damage);
   ~Character();

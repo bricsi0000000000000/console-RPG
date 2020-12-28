@@ -1,24 +1,42 @@
 #include <iostream>
 
-#include "character.cpp"
-#include "characterManager.cpp"
-#include "arena.cpp"
+#include "character.h"
+#include "characterManager.h"
+#include "arena.h"
 
 int main(int argc, char *argv[]){
 
   CharacterManager characterManager;
   Arena arena;
-  
-  if(argc < 7){
+    
+  if(argc < 3){
     std::cerr << "Nincs megadva eleg parameter\n";
     return 0;
   }
   else {
-    characterManager.AddCharacter(new Character(argv[1], std::stoi(argv[2]), std::stoi(argv[3])));
-    characterManager.AddCharacter(new Character(argv[4], std::stoi(argv[5]), std::stoi(argv[6])));
+    try
+    {
+      characterManager.AddCharacter(characterManager.parseUnit(argv[1]));
+    }
+    catch(const std::exception& e)
+    {
+      std::cerr << e.what() << '\n';
+      return 0;
+    }
+    
+    try
+    {
+      characterManager.AddCharacter(characterManager.parseUnit(argv[2]));
+    }
+    catch(const std::exception& e)
+    {
+      std::cerr << e.what() << '\n';
+      return 0;
+    }
 
-    arena.Battle(characterManager.GetCharacter(argv[1]), characterManager.GetCharacter(argv[4]));
+    arena.Battle(characterManager.GetCharacter(0), characterManager.GetCharacter(1));
   }
   
   return 0;
 }
+
