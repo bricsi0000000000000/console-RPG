@@ -7,4 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: g++ -Wall *.cpp
+      - run: g++ -Wall *.cpp -o rpg
+      - run: ./run_check_units.sh rpg units_output.txt
+      - run: diff units_output.txt units_good_outputs.txt
