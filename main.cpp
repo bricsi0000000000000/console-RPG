@@ -2,7 +2,7 @@
 
 #include "character.h"
 #include "characterManager.h"
-#include "arena.h"
+#include "arena.h" 
 
 int main(int argc, char *argv[]){
 

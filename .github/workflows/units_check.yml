@@ -8,5 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: g++ -Wall main.cpp character.cpp characterManager.cpp arena.cpp -I character.h characterManager.h arena.h -o rpg
+      - run: chmod +x run_check_units.sh
       - run: ./run_check_units.sh rpg units_output.txt
       - run: diff units_output.txt units_good_outputs.txt
