@@ -7,12 +7,8 @@ Arena::~Arena(){}
 
 void Arena::Battle(Character* character1, Character* character2){
   while(character1->IsAlive() && character2->IsAlive()){
-    std::cout << character1 << "\n";
-    std::cout << character2 << "\n";
     Duel(character1, character2);
 
-    std::cout << character1 << "\n";
-    std::cout << character2 << "\n";
     if(character2->IsAlive()){
       Duel(character2, character1);
     }
@@ -28,7 +24,5 @@ void Arena::Battle(Character* character1, Character* character2){
 }
 
 void Arena::Duel(Character* character, Character* opponent){
-
-  std::cout << character->GetName() << " -> " << opponent->GetName() << "\n";
   character->Attack(opponent);
 }

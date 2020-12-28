@@ -2,7 +2,7 @@
 
 #include "character.h"
 
-Character::Character(char* name,
+Character::Character(std::string name,
                      unsigned int health,
                      float damage)
 {
