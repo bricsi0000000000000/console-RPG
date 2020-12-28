@@ -4,7 +4,7 @@ on: push
 
 jobs:
   build:
-    run-on: ubunu-latest
+    runs-on: ubunu-latest
     steps:
       - uses: actions/checkout@v2
       - run: g++ -Wall *.cpp
