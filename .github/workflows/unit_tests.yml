@@ -8,4 +8,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: cmake
-        run: cd tests && make
+        run: cd tests && cmake CMakeLists.txt && make
