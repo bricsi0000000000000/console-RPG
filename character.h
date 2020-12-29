@@ -17,16 +17,6 @@ private:
   */
   std::string name;
 
-  /**
-   * Health of the character.
-  */
-  unsigned int health;
-
-  /**
-   * Damage of the character.
-   * That many can deal this character to an other character.
-  */
-  float damage;
 
   /**
    * Attack cooldown of the character.
@@ -34,12 +24,32 @@ private:
   */
   float attackcooldown;
 
+
+protected:
+  /**
+   * Maximum health of the character.
+  */
+  unsigned int maxHealth;
+  
+  /**
+   * Current health of the character.
+  */
+  unsigned int currentHealth;
+
+  /**
+   * Damage of the character.
+   * That many can deal this character to an other character.
+  */
+  float damage;
+
+  unsigned int xp;
+public:
   /**
    * An other character attacks this charater.
    * @param opponent The other character that attacks this one.
   */
-  void GetAttacked(Character* opponent);
-public:
+  unsigned int GetAttacked(Character* opponent);
+
   /**
    * Constructor for character.
    * @param name Name of the character.
@@ -55,7 +65,7 @@ public:
   /**
    * Destructor for character.
   */
-  ~Character();
+  virtual ~Character();
 
   /**
    * @return The name of the character.
@@ -81,12 +91,14 @@ public:
    * Attacks an other character.
    * @param opponent The other character to attack.
   */
-  void Attack(Character* opponent);
+  virtual void Attack(Character* opponent);
 
   /**
    * @return That the character is alive or not.
   */
   bool IsAlive();
+
+  int GetXp() const;
 
   /**
    * Operator overload to write the characters details nicely.

@@ -8,9 +8,12 @@ Character::Character(std::string name,
                      float attackcooldown)
 {
   this->name = name;
-  this->health = health;
+  this->maxHealth = health;
   this->damage = damage;
   this->attackcooldown = attackcooldown;
+
+  this->xp = 0;
+  this->currentHealth = this->maxHealth;
 }
 
 Character::~Character(){}
@@ -20,7 +23,7 @@ std::string Character::GetName() const{
 }
 
 unsigned int Character::GetHealth() const{
-  return this->health;
+  return this->currentHealth;
 }
 
 float Character::GetDamage() const{
@@ -35,12 +38,15 @@ void Character::Attack(Character* opponent){
   opponent->GetAttacked(this);
 }
 
-void Character::GetAttacked(Character* opponent){
-  if(this->health - opponent->GetDamage() >= 0){
-    this->health -= opponent->GetDamage();
+unsigned int Character::GetAttacked(Character* opponent){
+  if(GetHealth() - opponent->GetDamage() >= 0){
+    this->currentHealth -= opponent->GetDamage();
+    return opponent->GetDamage();
   }
   else{
-    this->health = 0;
+    int lastCurrentHealth = GetHealth();
+    this->currentHealth = 0;
+    return lastCurrentHealth;
   }
 }
 
@@ -48,8 +54,12 @@ bool Character::IsAlive(){
   return GetHealth() > 0;
 }
 
+int Character::GetXp() const{
+  return this->xp;
+}
+
 std::ostream& operator<<(std::ostream& os, const Character* character)
 {
-    os << character->GetName() << ": HP: " << character->GetHealth() << ", DMG: " << character->GetDamage();
-    return os;
+  os << character->GetName() << ": HP: " << character->GetHealth() << ", DMG: " << character->GetDamage();
+  return os;
 }

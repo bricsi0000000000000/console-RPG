@@ -6,6 +6,7 @@
 #include <map>
 
 #include "characterManager.h"
+#include "player.h"
 
 CharacterManager::CharacterManager(){}
 CharacterManager::~CharacterManager(){
@@ -14,7 +15,7 @@ CharacterManager::~CharacterManager(){
   }
 }
 
-Character* CharacterManager::parseUnit(std::string fileName){
+Player* CharacterManager::parseUnit(std::string fileName){
   std::fstream fileStream;
   fileStream.open(fileName, std::ios::in);
   if(fileStream){
@@ -73,10 +74,10 @@ Character* CharacterManager::parseUnit(std::string fileName){
 
     results.insert({key, value.substr(0, value.size() - 1)});
 
-    return new Character(results.find("name")->second,
-                         std::stoi(results.find("hp")->second),
-                         std::stof(results.find("dmg")->second),
-                         std::stof(results.find("attackcooldown")->second));
+    return new Player(results.find("name")->second,
+                      std::stoi(results.find("hp")->second),
+                      std::stof(results.find("dmg")->second),
+                      std::stof(results.find("attackcooldown")->second));
   }
   else
   {
