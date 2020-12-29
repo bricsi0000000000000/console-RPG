@@ -1,4 +1,8 @@
 <map id="Character::GetHealth" name="Character::GetHealth">
-<area shape="rect" id="node2" href="$class_arena.html#aafece6a755cf68178d4f3ccc67a4424b" title="Arena::Battle" alt="" coords="375,5,473,32"/>
-<area shape="rect" id="node3" href="$class_character.html#a18095520ae360be2d6fa1b2abdf2a2bf" title="Character::IsAlive" alt="" coords="200,31,327,57"/>
+<area shape="rect" id="node2" href="$class_arena.html#aafece6a755cf68178d4f3ccc67a4424b" title="Arena::Battle" alt="" coords="756,33,855,59"/>
+<area shape="rect" id="node3" href="$class_character.html#afbeeee9db703b4493dbe840045c82d1d" title="Character::GetAttacked" alt="" coords="200,58,360,85"/>
+<area shape="rect" id="node7" href="$class_character.html#a18095520ae360be2d6fa1b2abdf2a2bf" title="Character::IsAlive" alt="" coords="581,109,708,135"/>
+<area shape="rect" id="node4" href="$class_character.html#a9fcf63f86e7a2c300de8c9705e58b428" title="Character::Attack" alt="" coords="408,33,533,59"/>
+<area shape="rect" id="node6" href="$class_player.html#a1f04e72ee2626dac3229dee56d03fd73" title="Player::Attack" alt="" coords="418,83,523,110"/>
+<area shape="rect" id="node5" href="$class_arena.html#af38eb1fa0343d8afaee9db6773507eb9" title="Arena::Duel" alt="" coords="599,33,690,59"/>
 </map>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['health',['health',['../class_character.html#a52cd6f490583b1cb23ba2971be38bab1',1,'Character']]]
+  ['isalive',['IsAlive',['../class_character.html#a18095520ae360be2d6fa1b2abdf2a2bf',1,'Character']]]
 ];
