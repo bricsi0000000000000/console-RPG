@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['levelup',['LevelUp',['../class_player.html#ae85d8c70fe87b5da1e65cd2a76599ec8',1,'Player']]]
+  ['konzolos_20rpg_20játék',['Konzolos RPG játék',['../autotoc_md0.html',1,'']]]
 ];
