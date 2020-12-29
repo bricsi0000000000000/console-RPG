@@ -35,5 +35,5 @@
 .vscode
 
 # Doxygen
-DOCS
-/doxconf
+/DOCS
+doxconf
