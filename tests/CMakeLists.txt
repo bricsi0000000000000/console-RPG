@@ -1,19 +1,17 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.10)
 
-SET(CMAKE_CXX_FLAGS "-std=gnu++11") #Turn on C++11 Support
-
-# Locate GTest
+# Setup testing
+enable_testing()
 find_package(GTest REQUIRED)
-include_directories(${GTEST_INCLUDE_DIRS})
+include_directories(${GTEST_INCLUDE_DIR})
 
-set(FILES_TO_TEST unitTests.cpp)
-set(UNIT_TESTS unitTests.cpp)
-set(MAIN_FILE unitTests.cpp)
+# Add test cpp file
+add_executable(runUnitTests unitTests.cpp)
 
-add_library(codeToTest ${FILES_TO_TEST})
+# Link test executable against gtest & gtest_main
+target_link_libraries(runUnitTests ${GTEST_LIBRARY_DEBUG} ${GTEST_MAIN_LIBRARY_DEBUG})
 
-add_executable(rpg ${MAIN_FILE})
-target_link_libraries(rpg codeToTest)
-
-add_executable(unit-test ${UNIT_TESTS})
-target_link_libraries(unit-test gtest gtest_main rt pthread codeToTest)
+add_test(
+    NAME runUnitTests
+    COMMAND runUnitTests
+)
