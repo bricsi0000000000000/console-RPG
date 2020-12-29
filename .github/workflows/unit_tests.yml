@@ -1,0 +1,11 @@
+name: Unit tests
+
+on: push
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: cmake
+        run: cd tests && make

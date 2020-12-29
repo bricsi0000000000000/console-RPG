@@ -3,6 +3,7 @@
 #include "character.h"
 #include "characterManager.h"
 #include "arena.h"
+#include "jsonParser.h"
 
 /**
  * @file
@@ -21,7 +22,7 @@ int main(int argc, char *argv[]){
   else {
     try
     {
-      characterManager.AddCharacter(characterManager.parseUnit(argv[1]));
+      characterManager.AddCharacter(JsonParser::parseUnitFromFile(argv[1]));
     }
     catch(const std::exception& e)
     {
@@ -31,7 +32,7 @@ int main(int argc, char *argv[]){
     
     try
     {
-      characterManager.AddCharacter(characterManager.parseUnit(argv[2]));
+      characterManager.AddCharacter(JsonParser::parseUnitFromFile(argv[2]));
     }
     catch(const std::exception& e)
     {

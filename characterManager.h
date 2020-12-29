@@ -28,12 +28,6 @@ public:
   ~CharacterManager();
 
   /**
-   * Parses a unit from a json file.
-   * @exception Throws runtime_error exception when the file not found.
-  */
-  static Character* parseUnit(std::string fileName);
-
-  /**
    * Add a character to the characters vector.
   */
   void AddCharacter(Character* character);
