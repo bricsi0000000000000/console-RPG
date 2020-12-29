@@ -37,5 +37,15 @@
 # Doxygen
 /DOCS
 
+# cmake
+tests/bin
+tests/CMakeFiles
+tests/google*
+tests/lib
+tests/*.cmake
+tests/*Cache.txt
+tests/MakeFile
+tests/runUnitTests
+
 # valgrind
 callgrind*
