@@ -4,6 +4,7 @@
 #include <vector>
 
 #include "character.h"
+#include "player.h"
 
 /**
  * @class CharacterManager
@@ -16,6 +17,7 @@ private:
    * Vector if characters.
   */
   std::vector<Character*> characters;
+  
 public:
   /**
    * Constructor for CharacterManager

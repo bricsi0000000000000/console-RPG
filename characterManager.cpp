@@ -1,4 +1,5 @@
 #include "characterManager.h"
+#include "player.h"
 
 CharacterManager::CharacterManager(){}
 CharacterManager::~CharacterManager(){

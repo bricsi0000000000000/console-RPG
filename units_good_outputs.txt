@@ -1,6 +1,6 @@
-Kakarott wins. Remaining HP: 2999990
-Kakarott wins. Remaining HP: 3000000
-Kakarott wins. Remaining HP: 2999990
-Sammy wins. Remaining HP: 15
-Kakarott wins. Remaining HP: 2999970
-Sammy wins. Remaining HP: 25
+Mapple wins. Remaining HP: 200
+Kakarott wins. Remaining HP: 3000
+Mapple wins. Remaining HP: 200
+Mapple wins. Remaining HP: 1500
+Kakarott wins. Remaining HP: 2700
+Mapple wins. Remaining HP: 1200

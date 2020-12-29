@@ -46,3 +46,6 @@ tests/*.cmake
 tests/*Cache.txt
 tests/MakeFile
 tests/runUnitTests
+
+# valgrind
+callgrind*

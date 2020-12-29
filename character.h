@@ -8,7 +8,6 @@
  * \brief Represents a character.
  *        A Character can attack an other character.
 */
-
 class Character
 {
 private:
@@ -18,9 +17,21 @@ private:
   std::string name;
 
   /**
-   * Health of the character.
+   * Attack cooldown of the character.
+   * It shows that the character can attack after this many *seconds*.
   */
-  unsigned int health;
+  float attackcooldown;
+
+protected:
+  /**
+   * Maximum health of the character.
+  */
+  unsigned int maxHealth;
+  
+  /**
+   * Current health of the character.
+  */
+  unsigned int currentHealth;
 
   /**
    * Damage of the character.
@@ -29,17 +40,17 @@ private:
   float damage;
 
   /**
-   * Attack cooldown of the character.
-   * It shows that the character can attack after this many *seconds*.
+   * Experience points that the character has.
   */
-  float attackcooldown;
-
+  unsigned int xp;
+public:
   /**
    * An other character attacks this charater.
    * @param opponent The other character that attacks this one.
+   * @return How much damage the character suffered.
   */
-  void GetAttacked(Character* opponent);
-public:
+  unsigned int GetAttacked(Character* opponent);
+
   /**
    * Constructor for character.
    * @param name Name of the character.
@@ -47,7 +58,7 @@ public:
    * @param damage Damage of the character.
    * @param attackcooldown Attack cooldown of the character.
   */
-  Character(std::string name,
+  Character(const std::string& name,
             unsigned int health,
             float damage,
             float attackcooldown);
@@ -55,7 +66,7 @@ public:
   /**
    * Destructor for character.
   */
-  ~Character();
+  virtual ~Character();
 
   /**
    * @return The name of the character.
@@ -81,12 +92,17 @@ public:
    * Attacks an other character.
    * @param opponent The other character to attack.
   */
-  void Attack(Character* opponent);
+  virtual void Attack(Character* opponent);
 
   /**
    * @return That the character is alive or not.
   */
   bool IsAlive();
+
+  /**
+   * @return How many xp the character has.
+  */
+  int GetXp() const;
 
   /**
    * Operator overload to write the characters details nicely.
