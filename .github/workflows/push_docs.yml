@@ -3,7 +3,7 @@ name: push documents
 on:
   push:
     branches:
-      - main
+      - attackspeed
       - gh-pages
 
 jobs:
