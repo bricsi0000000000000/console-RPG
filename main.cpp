@@ -14,6 +14,7 @@
 int main(int argc, char *argv[]){
   CharacterManager characterManager;
   Arena arena;
+  JsonParser parser;
     
   if(argc < 3){
     std::cerr << "Nincs megadva eleg parameter\n";
@@ -22,7 +23,7 @@ int main(int argc, char *argv[]){
   else {
     try
     {
-      characterManager.AddCharacter(JsonParser::parseUnitFromFile(argv[1]));
+      characterManager.AddCharacter(parser.parseUnitFromFile(argv[1]));
     }
     catch(const std::exception& e)
     {
@@ -32,7 +33,7 @@ int main(int argc, char *argv[]){
     
     try
     {
-      characterManager.AddCharacter(JsonParser::parseUnitFromFile(argv[2]));
+      characterManager.AddCharacter(parser.parseUnitFromFile(argv[2]));
     }
     catch(const std::exception& e)
     {

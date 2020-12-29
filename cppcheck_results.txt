@@ -1,8 +1,0 @@
-character.cpp:5:34: performance: Function parameter 'name' should be passed by const reference. [passedByValue]
-Character::Character(std::string name,
-                                 ^
-characterManager.cpp:16:48: style: Consider using std::find_if algorithm instead of a raw loop. [useStlAlgorithm]
-    if(character->GetName().compare(name) == 0){
-                                               ^
-nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingIncludeSystem]
-
