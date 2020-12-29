@@ -30,9 +30,7 @@ if(CMAKE_VERSION VERSION_LESS 2.8.11)
     )
 endif()
 
-# Now simply link your own targets against gtest, gmock,
-# etc. as appropriate
-
+# Link my targets
 add_executable( runUnitTests unitTests.cpp )
 target_link_libraries(runUnitTests gtest gtest_main pthread)
 target_compile_features(runUnitTests PRIVATE cxx_std_17)
