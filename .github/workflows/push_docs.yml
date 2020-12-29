@@ -3,7 +3,7 @@ name: push documents
 on:
   push:
     branches:
-      - attackspeed
+      - main
       - gh-pages
 
 jobs:
@@ -11,7 +11,7 @@ jobs:
     name: Deploy to github pages
     runs-on: ubuntu-latest
     steps:
-      - uses: action/checkout@attackspeed
+      - uses: action/checkout@main
 
       - run: sudo apt-get install doxygen
       - run: sudo apt-get install graphviz
