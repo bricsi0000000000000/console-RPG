@@ -9,9 +9,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - run: g++ -Wall *.cpp -o rpg
-      - run: sudo apt-get install valgrind
+      - run: sudo apt-get install -y valgrind
       - run: valgrind rpg units/unit1.json units/unit2.json
-      
+
       - run: chmod +x run_check_units.sh
       - run: ./run_check_units.sh rpg units_output.txt
       - run: diff units_output.txt units_good_outputs.txt
