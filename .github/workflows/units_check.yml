@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install dependencies
-        run: sudo apt install -y cppcheck && sudo apt install -y valgrind && sudo apt install -y gcc g++
+        run: sudo apt install -y cppcheck && sudo apt install -y gcc g++
 
       - name: Code analysis
         run: cppcheck *.cpp --enable=all --output-file=cppcheck_results.txt && chmod +x check_warning.sh && ./check_warning.sh && chmod +x check_error.sh && ./check_error.sh
@@ -22,9 +22,6 @@ jobs:
 
       - name: Build
         run: g++ -Wall *.cpp -o rpg
-      
-      - name: Valgrind check
-        run:  valgrind --leak-check=full --error-exitcode=1 ./rpg units/unit1.json units/unit2.json
       
       - name: In-out tests
         run: chmod +x run_check_units.sh && ./run_check_units.sh rpg units_output.txt && diff units_output.txt units_good_outputs.txt
