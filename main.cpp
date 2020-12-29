@@ -1,8 +1,8 @@
 #include <iostream>
 
-#include "character.cpp"
-#include "characterManager.cpp"
-#include "arena.cpp"
+#include "character.h"
+#include "characterManager.h"
+#include "arena.h"
 
 /**
  * @file
