@@ -1,3 +1,5 @@
+cmake_minimum_required(VERSION 3.19)
+
 include(gtest)
 enable_testing()
 set(console_RPG_test ${PROJECT_NAME}_test)
