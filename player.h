@@ -9,19 +9,49 @@
 
 #include "character.h"
 
+/**
+ * @class Player
+ * @brief Represents a player that is derived from Character.
+*/
 class Player : public Character
 {
 private:
+  /**
+   * Gains amount experience point.
+   * @param amount How many experience point shuold be gained.
+  */
   void GainXp(unsigned int amount);
+
+  /**
+   * Checks if the experience points are enough to step on the next level.
+   * Default level up is 100 xp.
+   * When level up happens the maximum health and damage grow by 10%.
+  */
   void LevelUp(int lastXp, int newXp);
+
 public:
-  Player(std::string name,
+  /**
+   * Constructor for Player
+   * @param name Name of the player.
+   * @param health Health of the player.
+   * @param damage Damage of the player.
+   * @param attackcooldown Attack cooldown of the player.
+  */
+  Player(std::string& name,
          unsigned int health,
          float damage,
          float attackcooldown);
+
+  /**
+   * Destructor for Player.
+  */
   ~Player();
 
-  void Attack(Character* opponent);
+  /**
+   * Attacks an other character.
+   * Overrides the Characters Attack method by adding gain xp.
+  */
+  void Attack(Character* opponent) override;
 };
 
 #endif //PLAYER_H

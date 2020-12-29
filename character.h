@@ -8,7 +8,6 @@
  * \brief Represents a character.
  *        A Character can attack an other character.
 */
-
 class Character
 {
 private:
@@ -17,13 +16,11 @@ private:
   */
   std::string name;
 
-
   /**
    * Attack cooldown of the character.
    * It shows that the character can attack after this many *seconds*.
   */
   float attackcooldown;
-
 
 protected:
   /**
@@ -42,11 +39,15 @@ protected:
   */
   float damage;
 
+  /**
+   * Experience points that the character has.
+  */
   unsigned int xp;
 public:
   /**
    * An other character attacks this charater.
    * @param opponent The other character that attacks this one.
+   * @return How much damage the character suffered.
   */
   unsigned int GetAttacked(Character* opponent);
 
@@ -57,7 +58,7 @@ public:
    * @param damage Damage of the character.
    * @param attackcooldown Attack cooldown of the character.
   */
-  Character(std::string name,
+  Character(const std::string& name,
             unsigned int health,
             float damage,
             float attackcooldown);
@@ -98,6 +99,9 @@ public:
   */
   bool IsAlive();
 
+  /**
+   * @return How many xp the character has.
+  */
   int GetXp() const;
 
   /**

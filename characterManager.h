@@ -17,6 +17,7 @@ private:
    * Vector if characters.
   */
   std::vector<Character*> characters;
+  
 public:
   /**
    * Constructor for CharacterManager
