@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "character.h"
+#include "player.h"
 #include "characterManager.h"
 #include "arena.h"
 
@@ -11,30 +12,27 @@
  * @param argv is an array that contains the arguments. First one is the programs name.
  */
 int main(int argc, char *argv[]){
+
   CharacterManager characterManager;
   Arena arena;
-    
+
   if(argc < 3){
     std::cerr << "Nincs megadva eleg parameter\n";
     return 0;
   }
   else {
-    try
-    {
+    try{
       characterManager.AddCharacter(characterManager.parseUnit(argv[1]));
     }
-    catch(const std::exception& e)
-    {
+    catch(const std::exception& e){
       std::cerr << e.what() << '\n';
       return 0;
     }
     
-    try
-    {
+    try{
       characterManager.AddCharacter(characterManager.parseUnit(argv[2]));
     }
-    catch(const std::exception& e)
-    {
+    catch(const std::exception& e){
       std::cerr << e.what() << '\n';
       return 0;
     }

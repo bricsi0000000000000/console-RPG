@@ -36,3 +36,6 @@
 
 # Doxygen
 /DOCS
+
+# valgrind
+callgrind*
