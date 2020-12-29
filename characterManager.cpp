@@ -75,7 +75,8 @@ Character* CharacterManager::parseUnit(std::string fileName){
 
     return new Character(results.find("name")->second,
                          std::stoi(results.find("hp")->second),
-                         std::stof(results.find("dmg")->second));
+                         std::stof(results.find("dmg")->second),
+                         std::stof(results.find("attackcooldown")->second));
   }
   else
   {
@@ -101,10 +102,4 @@ Character* CharacterManager::GetCharacter(std::string name){
 
 Character* CharacterManager::GetCharacter(int index){
   return characters[index];
-}
-
-std::ostream& operator<<(std::ostream& os, const Character* character)
-{
-    os << character->GetName() << ": HP: " << character->GetHealth() << ", DMG: " << character->GetDamage();
-    return os;
 }
