@@ -1,17 +1,12 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 2.6)
 
-# Setup testing
-enable_testing()
+#Locate GTest
 find_package(GTest REQUIRED)
-include_directories(${GTEST_INCLUDE_DIR})
+include_directories(${GTEST_INCLUDE_DIRS})
 
-# Add test cpp file
-add_executable(runUnitTests unitTests.cpp)
+# Link runTests with what we want to test
+# and the GTest and pthread library
 
-# Link test executable against gtest & gtest_main
-target_link_libraries(runUnitTests ${GTEST_LIBRARY_DEBUG} ${GTEST_MAIN_LIBRARY_DEBUG})
-
-add_test(
-    NAME runUnitTests
-    COMMAND runUnitTests
-)
+add_executable( runUnitTests unitTests.cpp )
+target_link_libraries(runUnitTests gtest gtest_main pthread)
+target_compile_features(runUnitTests PRIVATE cxx_std_17)
