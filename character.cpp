@@ -4,11 +4,13 @@
 
 Character::Character(std::string name,
                      unsigned int health,
-                     float damage)
+                     float damage,
+                     float attackcooldown)
 {
   this->name = name;
   this->health = health;
   this->damage = damage;
+  this->attackcooldown = attackcooldown;
 }
 
 Character::~Character(){}
@@ -23,6 +25,10 @@ unsigned int Character::GetHealth() const{
 
 float Character::GetDamage() const{
   return this->damage;
+}
+
+float Character::GetAttackcooldown() const{
+  return this->attackcooldown;
 }
 
 void Character::Attack(Character* opponent){
@@ -40,4 +46,10 @@ void Character::GetAttacked(Character* opponent){
 
 bool Character::IsAlive(){
   return GetHealth() > 0;
+}
+
+std::ostream& operator<<(std::ostream& os, const Character* character)
+{
+    os << character->GetName() << ": HP: " << character->GetHealth() << ", DMG: " << character->GetDamage();
+    return os;
 }
