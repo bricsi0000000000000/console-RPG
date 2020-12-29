@@ -1,0 +1,4 @@
+<map id="Character::GetHealth" name="Character::GetHealth">
+<area shape="rect" id="node2" href="$class_arena.html#aafece6a755cf68178d4f3ccc67a4424b" title="Arena::Battle" alt="" coords="375,5,473,32"/>
+<area shape="rect" id="node3" href="$class_character.html#a18095520ae360be2d6fa1b2abdf2a2bf" title="Character::IsAlive" alt="" coords="200,31,327,57"/>
+</map>

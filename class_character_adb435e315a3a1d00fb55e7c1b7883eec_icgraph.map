@@ -1,0 +1,6 @@
+<map id="Character::GetDamage" name="Character::GetDamage">
+<area shape="rect" id="node2" href="$class_character.html#ab7bf5908eb3e1f5f8b8d12cf6891c66f" title="Character::GetAttacked" alt="" coords="211,5,371,32"/>
+<area shape="rect" id="node3" href="$class_character.html#a9fcf63f86e7a2c300de8c9705e58b428" title="Character::Attack" alt="" coords="419,5,544,32"/>
+<area shape="rect" id="node4" href="$class_arena.html#af38eb1fa0343d8afaee9db6773507eb9" title="Arena::Duel" alt="" coords="592,5,683,32"/>
+<area shape="rect" id="node5" href="$class_arena.html#aafece6a755cf68178d4f3ccc67a4424b" title="Arena::Battle" alt="" coords="731,5,829,32"/>
+</map>
