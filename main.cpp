@@ -23,8 +23,7 @@ int main(int argc, char *argv[]){
     return 0;
   }
   else {
-    try
-    {
+    try{
       characterManager.AddCharacter(parser.parseUnitFromFile(argv[1]));
     }
     catch(const std::exception& e){
@@ -32,8 +31,7 @@ int main(int argc, char *argv[]){
       return 0;
     }
     
-    try
-    {
+    try{
       characterManager.AddCharacter(parser.parseUnitFromFile(argv[2]));
     }
     catch(const std::exception& e){
@@ -46,4 +44,3 @@ int main(int argc, char *argv[]){
   
   return 0;
 }
-
