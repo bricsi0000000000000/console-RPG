@@ -5,7 +5,7 @@ COMPILER := g++
 CPPFILES := JSON.cpp Monster.cpp Hero.cpp Map.cpp Game.cpp main.cpp
 
 build: $(OBJECTS)
-	$(COMPILER) -o a.out $(OBJECTS)
+	$(COMPILER) -o rpg $(OBJECTS)
 
 main.o: main.cpp arena.cpp character.cpp characterManager.cpp jsonParser.cpp player.cpp
 	$(COMPILER) -c main.cpp
