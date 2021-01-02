@@ -39,11 +39,11 @@
 
 # cmake
 tests/bin
-tests/CMakeFiles
+CMakeFiles
 tests/google*
 tests/lib
-tests/*.cmake
-tests/*Cache.txt
+*.cmake
+*Cache.txt
 tests/MakeFile
 tests/runUnitTests
 

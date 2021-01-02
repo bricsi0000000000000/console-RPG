@@ -21,7 +21,7 @@ jobs:
           path: cppcheck_results.txt
 
       - name: Build
-        run: g++ -Wall *.cpp -o rpg
+        run: cmake CMakeLists.txt && make
       
       - name: In-out tests
         run: chmod +x run_check_units.sh && ./run_check_units.sh rpg units_output.txt && diff units_output.txt units_good_outputs.txt
