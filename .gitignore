@@ -44,8 +44,8 @@ tests/google*
 tests/lib
 *.cmake
 *Cache.txt
-tests/MakeFile
 tests/runUnitTests
+tests/MakeFile
 
 # valgrind
 callgrind*
