@@ -6,7 +6,9 @@
 Player::Player(std::string& name,
                unsigned int health,
                float damage,
-               float attackcooldown) : Character(name, health, damage, attackcooldown){}
+               float attackcooldown,
+               int position_row,
+               int position_column) : Character(name, health, damage, attackcooldown, position_row, position_column){}
 
 Player::~Player(){}
 

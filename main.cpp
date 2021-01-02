@@ -1,10 +1,13 @@
 #include <iostream>
+#include <memory>
 
 #include "character.h"
 #include "player.h"
 #include "characterManager.h"
-#include "arena.h"
 #include "jsonParser.h"
+#include "mapReader.h"
+#include "map.h"
+#include "game.h"
 
 /**
  * @file
@@ -15,33 +18,31 @@
 int main(int argc, char *argv[]){
 
   CharacterManager characterManager;
-  Arena arena;
   JsonParser parser;
+  int characterNumbers = 2;
 
   if(argc < 3){
     std::cerr << "Nincs megadva eleg parameter\n";
     return 0;
   }
   else {
-    try
-    {
-      characterManager.AddCharacter(parser.parseUnitFromFile(argv[1]));
-    }
-    catch(const std::exception& e){
-      std::cerr << e.what() << '\n';
-      return 0;
-    }
-    
-    try
-    {
-      characterManager.AddCharacter(parser.parseUnitFromFile(argv[2]));
-    }
-    catch(const std::exception& e){
-      std::cerr << e.what() << '\n';
-      return 0;
-    }
+    try {
+      Character* character = parser.parseUnitFromFile(argv[1]);
+      character->SetNumber(characterNumbers++);
+      characterManager.AddCharacter(character);
 
-    arena.Battle(characterManager.GetCharacter(0), characterManager.GetCharacter(1));
+      MapReader mapReader;
+      Map map = mapReader.ReadMap(argv[2]);
+      map.SetCell(character->GetPositionRow(),
+                  character->GetPositionColumn(),
+                  character->GetNumber());
+
+      Game game(argv[2], map, character);
+    }
+    catch(const std::exception& e){
+      std::cerr << e.what() << '\n';
+      return 0;
+    }
   }
   
   return 0;

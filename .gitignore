@@ -39,7 +39,7 @@
 
 # cmake
 tests/bin
-tests/CMakeFiles
+CMakeFiles
 tests/google*
 tests/lib
 tests/*.cmake

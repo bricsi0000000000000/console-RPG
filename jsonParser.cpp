@@ -15,6 +15,8 @@ Character* JsonParser::parseUnitFromStream(std::fstream& fileStream){
   if(fileStream){
     std::string content((std::istreambuf_iterator<char>(fileStream)),
                         (std::istreambuf_iterator<char>()));
+
+    fileStream.close();
     return parseUnitFromFileContent(content);
   }
   else{
@@ -85,7 +87,9 @@ Character* JsonParser::parseUnitFromFileContent(std::string content){
   results.insert({key, value.substr(0, value.size() - 1)});
 
   return new Character(results.find("name")->second,
-                        std::stoi(results.find("hp")->second),
-                        std::stof(results.find("dmg")->second),
-                        std::stof(results.find("attackcooldown")->second));
+                       std::stoi(results.find("hp")->second),
+                       std::stof(results.find("dmg")->second),
+                       std::stof(results.find("attackcooldown")->second),
+                       std::stoi(results.find("position_row")->second),
+                       std::stoi(results.find("position_column")->second));
 }

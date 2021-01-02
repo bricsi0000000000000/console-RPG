@@ -40,7 +40,9 @@ public:
   Player(std::string& name,
          unsigned int health,
          float damage,
-         float attackcooldown);
+         float attackcooldown,
+         int position_row,
+         int position_column);
 
   /**
    * Destructor for Player.

@@ -16,6 +16,10 @@ private:
   */
   std::string name;
 
+  int position_row;
+  int position_column;
+  int number;
+
   /**
    * Attack cooldown of the character.
    * It shows that the character can attack after this many *seconds*.
@@ -61,7 +65,9 @@ public:
   Character(const std::string& name,
             unsigned int health,
             float damage,
-            float attackcooldown);
+            float attackcooldown,
+            int position_row,
+            int position_column);
 
   /**
    * Destructor for character.
@@ -103,6 +109,13 @@ public:
    * @return How many xp the character has.
   */
   int GetXp() const;
+
+  int GetPositionRow();
+  int GetPositionColumn();
+  int GetNumber();
+  void SetNumber(int number);
+  void SetPositionRow(int number);
+  void SetPositionColumn(int number);
 
   /**
    * Operator overload to write the characters details nicely.
