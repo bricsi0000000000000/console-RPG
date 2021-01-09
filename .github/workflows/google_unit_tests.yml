@@ -1,4 +1,4 @@
-name: Unit tests
+name: Google unit tests
 
 on: push
 
@@ -8,5 +8,5 @@ jobs:
     container: bricsi/google_test
     steps:
       - uses: actions/checkout@v2
-      - name: cmake
+      - name: Build google test and run it
         run: cd tests && cmake CMakeLists.txt && make

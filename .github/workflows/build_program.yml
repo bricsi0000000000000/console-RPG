@@ -1,4 +1,4 @@
-name: check units workflow
+name: Build program
 
 on: push
 
@@ -15,11 +15,11 @@ jobs:
       - name: In and out tests
         run: make in_out_tests
 
-      - name: Doxygen
-        run: make doxygen
-
       - name: Unit tests
         run: make unit_tests
+
+      - name: Build doxygen
+        run: make doxygen
 
       - name: Static code analysis
         run: make static_code_analysis
