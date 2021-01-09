@@ -5,23 +5,26 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: bricsi/mosze
     steps:
       - uses: actions/checkout@v2
       
-      - name: Install dependencies
-        run: sudo apt install -y cppcheck && sudo apt install -y gcc g++
+      - name: Build
+        run: make build
 
-      - name: Code analysis
-        run: cppcheck *.cpp --enable=all --output-file=cppcheck_results.txt && chmod +x check_warning.sh && ./check_warning.sh && chmod +x check_error.sh && ./check_error.sh
+      - name: In and out tests
+        run: make in_out_tests
 
+      - name: Doxygen
+        run: make doxygen
+
+      - name: Unit tests
+        run: make unit_tests
+
+      - name: Static code analysis
+        run: make static_code_analysis
       - name: Upload code analysis result 
         uses: actions/upload-artifact@v2  
         with:
           name: cppcheck_results
           path: cppcheck_results.txt
-
-      - name: Build
-        run: g++ -Wall *.cpp -o rpg
-      
-      - name: In-out tests
-        run: chmod +x run_check_units.sh && ./run_check_units.sh rpg units_output.txt && diff units_output.txt units_good_outputs.txt

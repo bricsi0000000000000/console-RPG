@@ -22,7 +22,7 @@ int main(int argc, char *argv[]){
   int characterNumbers = 2;
 
   if(argc < 3){
-    std::cerr << "Nincs megadva eleg parameter\n";
+    std::cerr << "Nincs megadva eleg parameter. Meg kell adnod egy unit-ot és egy map-et.\n";
     return 0;
   }
   else {
