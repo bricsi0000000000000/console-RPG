@@ -43,7 +43,7 @@ CMakeFiles
 tests/google*
 tests/lib
 *.cmake
-*Cache.txt
+CMakeCache.txt
 tests/MakeFile
 tests/runUnitTests
 
