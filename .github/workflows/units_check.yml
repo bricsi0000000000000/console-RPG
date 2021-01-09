@@ -5,7 +5,7 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: bricsi/mosze:tagname
+    container: bricsi/mosze
     steps:
       - uses: actions/checkout@v2
       
