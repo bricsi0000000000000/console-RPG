@@ -9,7 +9,7 @@ on:
 jobs:
   deploy:
     name: Deploy to github pages
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     container: bricsi/doxygen
     steps:
       - uses: actions/checkout@main

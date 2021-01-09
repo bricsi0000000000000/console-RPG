@@ -5,6 +5,7 @@ on: push
 jobs:
   build_and_test:
     runs-on: ubuntu-20.04
+    container: bricsi/google_test
     steps:
       - uses: actions/checkout@v2
       - name: cmake
