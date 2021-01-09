@@ -23,4 +23,4 @@ run_unit_tests:
 	cd tests && ./runUnitTests
 
 static_code_analysis:
-	cppcheck $(CPPFILES) --output-file=cppcheck_results.txt && chmod +x check_warning.sh && ./check_warning.sh && chmod +x check_error.sh && ./check_error.sh
+	cppcheck $(CPPFILES) --enable=all --output-file=cppcheck_results.txt && chmod +x check_warning.sh && ./check_warning.sh && chmod +x check_error.sh && ./check_error.sh

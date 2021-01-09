@@ -49,3 +49,5 @@ tests/runUnitTests
 
 # valgrind
 callgrind*
+
+cppcheck_results.txt
