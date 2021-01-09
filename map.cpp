@@ -11,7 +11,7 @@ int Map::GetCell(int row, int column){
 }
 
 void Map::Display(){
-  for(int row_index = 0; row_index <= cells.size(); row_index++){
+  for(int row_index = 0; row_index < cells.size(); row_index++){
     for(int column_index = 0; column_index <= cells[row_index].size(); column_index++){
       if(column_index == 0                       && row_index == 0 ||
          column_index == cells[row_index].size() && row_index == 0 ||
