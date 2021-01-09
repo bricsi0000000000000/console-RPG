@@ -14,7 +14,7 @@ in_out_tests:
 	chmod +x check_units.sh && ./check_units.sh
 
 doxygen:
-	doxygen doxyconf
+	doxygen doxconf
 
 unit_tests:
 	cd tests && cmake . && make
