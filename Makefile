@@ -11,7 +11,7 @@ main.o: main.cpp character.h player.h characterManager.h jsonParser.h mapReader.
 	$(COMPILER) $(COMPILERFLAGS) -c main.cpp
 
 in_out_tests:
-	chmod +x run_test.sh && ./run_test.sh
+	chmod +x check_units.sh && ./check_units.sh
 
 doxygen:
 	doxygen doxyconf
