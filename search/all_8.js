@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['levelup',['LevelUp',['../class_player.html#ae85d8c70fe87b5da1e65cd2a76599ec8',1,'Player']]]
+  ['levelup_17',['LevelUp',['../class_player.html#aae180f7a4a011ba1fd485e3d8728f489',1,'Player']]],
+  ['levelxp_18',['levelXp',['../class_player.html#adf07691798b87a93c1aa27ba5215fcfe',1,'Player']]]
 ];

@@ -1,4 +1,0 @@
-<map id="Character::GetXp" name="Character::GetXp">
-<area shape="rect" id="node2" href="$class_player.html#aceb8c1da43083fe065abc83d32884d21" title="Player::GainXp" alt="" coords="177,5,288,32"/>
-<area shape="rect" id="node3" href="$class_player.html#a1f04e72ee2626dac3229dee56d03fd73" title="Player::Attack" alt="" coords="336,5,441,32"/>
-</map>

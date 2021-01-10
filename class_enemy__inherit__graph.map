@@ -1,0 +1,4 @@
+<map id="Enemy" name="Enemy">
+<area shape="rect" id="node1" title="Represents an enemy that is derived from Character." alt="" coords="15,80,81,107"/>
+<area shape="rect" id="node2" href="$class_character.html" title="Represents a character. A Character can attack an other character." alt="" coords="5,5,91,32"/>
+</map>

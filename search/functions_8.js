@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['parseunitfromfile',['parseUnitFromFile',['../class_json_parser.html#ac36bfe7f1bb4200898830c222222df3f',1,'JsonParser']]],
-  ['parseunitfromfilecontent',['parseUnitFromFileContent',['../class_json_parser.html#ac0f0a03389484c0566d503292dbfe200',1,'JsonParser']]],
-  ['parseunitfromstream',['parseUnitFromStream',['../class_json_parser.html#a7e13e3a2fb89cb892cd622f85cfe3021',1,'JsonParser']]],
-  ['player',['Player',['../class_player.html#a908a970b8f768a20e23b1ef3bef659c1',1,'Player']]]
+  ['_7echaracter_58',['~Character',['../class_character.html#a9e9be564d05ded80962b2045aa70b3fc',1,'Character']]],
+  ['_7eenemy_59',['~Enemy',['../class_enemy.html#ac0eec4755e28c02688065f9657150ac3',1,'Enemy']]],
+  ['_7ejsonparser_60',['~JsonParser',['../class_json_parser.html#a7c0393b54c37f9ff30b6bb59f0ba92ce',1,'JsonParser']]],
+  ['_7eplayer_61',['~Player',['../class_player.html#a749d2c00e1fe0f5c2746f7505a58c062',1,'Player']]]
 ];

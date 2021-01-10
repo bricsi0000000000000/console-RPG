@@ -1,6 +1,6 @@
 <map id="Character::GetAttacked" name="Character::GetAttacked">
-<area shape="rect" id="node2" href="$class_character.html#a9fcf63f86e7a2c300de8c9705e58b428" title="Character::Attack" alt="" coords="213,5,339,32"/>
-<area shape="rect" id="node5" href="$class_player.html#a1f04e72ee2626dac3229dee56d03fd73" title="Player::Attack" alt="" coords="223,56,329,83"/>
-<area shape="rect" id="node3" href="$class_arena.html#af38eb1fa0343d8afaee9db6773507eb9" title="Arena::Duel" alt="" coords="387,5,477,32"/>
-<area shape="rect" id="node4" href="$class_arena.html#aafece6a755cf68178d4f3ccc67a4424b" title="Arena::Battle" alt="" coords="525,5,624,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="188,56,361,83"/>
+<area shape="rect" id="node2" href="$class_enemy.html#ac476112eba38450d000c2bc131d8dcf5" title=" " alt="" coords="15,5,131,32"/>
+<area shape="rect" id="node3" href="$class_player.html#a1f04e72ee2626dac3229dee56d03fd73" title=" " alt="" coords="16,56,129,83"/>
+<area shape="rect" id="node4" href="$class_character.html#a9fcf63f86e7a2c300de8c9705e58b428" title=" " alt="" coords="5,107,140,133"/>
 </map>

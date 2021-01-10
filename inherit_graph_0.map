@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_arena.html" title="Represents an arena, where characters can fight each other. " alt="" coords="5,5,61,32"/>
+<area shape="rect" id="node1" href="$class_character.html" title="Represents a character. A Character can attack an other character." alt="" coords="5,31,91,57"/>
+<area shape="rect" id="node2" href="$class_enemy.html" title="Represents an enemy that is derived from Character." alt="" coords="139,5,205,32"/>
+<area shape="rect" id="node3" href="$class_player.html" title="Represents a player that is derived from Character." alt="" coords="141,56,203,83"/>
 </map>

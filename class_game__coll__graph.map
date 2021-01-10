@@ -1,0 +1,6 @@
+<map id="Game" name="Game">
+<area shape="rect" id="node1" title=" " alt="" coords="32,171,93,197"/>
+<area shape="rect" id="node2" href="$class_map.html" title=" " alt="" coords="5,81,56,108"/>
+<area shape="rect" id="node3" href="$class_player.html" title="Represents a player that is derived from Character." alt="" coords="81,81,143,108"/>
+<area shape="rect" id="node4" href="$class_character.html" title="Represents a character. A Character can attack an other character." alt="" coords="69,5,155,32"/>
+</map>

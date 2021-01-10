@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['character',['Character',['../class_character.html#ae3e951cdda923d13687fb4424de3332f',1,'Character']]],
-  ['charactermanager',['CharacterManager',['../class_character_manager.html#a92eca718c19cbfc19ad0497a5d61be0e',1,'CharacterManager']]]
+  ['enemy_43',['Enemy',['../class_enemy.html#a3fd8f333b0f076cce0c58492d347de31',1,'Enemy']]]
 ];

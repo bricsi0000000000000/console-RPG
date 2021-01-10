@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['maxhealth',['maxHealth',['../class_character.html#abf8ea4a4b78c3e3aeccd3345c4073a26',1,'Character']]]
+  ['levelxp_65',['levelXp',['../class_player.html#adf07691798b87a93c1aa27ba5215fcfe',1,'Player']]]
 ];

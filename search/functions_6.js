@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jsonparser',['JsonParser',['../class_json_parser.html#af21abdfb0ceac731e44d897a0285f5d4',1,'JsonParser']]]
+  ['levelup_53',['LevelUp',['../class_player.html#aae180f7a4a011ba1fd485e3d8728f489',1,'Player']]]
 ];

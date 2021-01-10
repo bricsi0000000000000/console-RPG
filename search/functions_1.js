@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['battle',['Battle',['../class_arena.html#aafece6a755cf68178d4f3ccc67a4424b',1,'Arena']]]
+  ['character_42',['Character',['../class_character.html#ab24486eee4bd052495e57154ecea0959',1,'Character']]]
 ];
