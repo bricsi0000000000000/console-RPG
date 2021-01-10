@@ -39,13 +39,18 @@
 
 # cmake
 tests/bin
-tests/CMakeFiles
+CMakeFiles
 tests/google*
 tests/lib
-tests/*.cmake
-tests/*Cache.txt
+*cmake_install.cmake
+CMakeCache.txt
 tests/MakeFile
 tests/runUnitTests
 
 # valgrind
 callgrind*
+*valgrind_output.txt
+
+*cppcheck_results.txt
+
+*run.sh

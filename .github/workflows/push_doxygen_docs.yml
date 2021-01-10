@@ -1,4 +1,4 @@
-name: push documents
+name: Push doxygen documents
 
 on:
   push:
@@ -9,12 +9,11 @@ on:
 jobs:
   deploy:
     name: Deploy to github pages
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
+    container: bricsi/doxygen
     steps:
       - uses: actions/checkout@main
 
-      - run: sudo apt-get install doxygen
-      - run: sudo apt-get install graphviz
       - run: doxygen doxconf
 
       - name: Push git subdir as branch

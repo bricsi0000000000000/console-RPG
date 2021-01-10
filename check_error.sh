@@ -1,4 +1,5 @@
 #!/bin/bash
-if grep --quiet "error" "./cppcheck_results.txt"
-then exit 1
+if [grep -q "error" "cppcheck_results.txt"]
+then
+	exit 1
 fi

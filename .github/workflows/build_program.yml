@@ -1,0 +1,30 @@
+name: Build program
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    container: bricsi/mosze
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Build
+        run: make build
+
+      - name: In and out tests
+        run: make in_out_tests
+
+      - name: Unit tests
+        run: make unit_tests
+
+      - name: Build doxygen
+        run: make doxygen
+
+      - name: Static code analysis
+        run: make static_code_analysis
+      - name: Upload code analysis result 
+        uses: actions/upload-artifact@v2  
+        with:
+          name: cppcheck_results
+          path: cppcheck_results.txt

@@ -14,6 +14,17 @@ class JsonParser
 private:
 public:
   /**
+   * Parses a unit from a string.
+  */
+  static Character* parseUnitFromFileContent(std::string content);
+
+  /**
+   * Parses a unit from a file stream.
+   * @exception Throws runtime_error exception when the file not found.
+  */
+ static  Character* parseUnitFromStream(std::fstream& fileStream);
+
+  /**
    * Constructor for JsonParser
   */
   JsonParser();
@@ -22,22 +33,11 @@ public:
    * Destructor for JsonParser
   */
   ~JsonParser();
-  
-  /**
-   * Parses a unit from a string.
-  */
-  static Character* parseUnitFromFileContent(std::string content);
 
   /**
    * Parses a unit from file.
   */
-  static Character* parseUnitFromFile(std::string fileName);
-
-  /**
-   * Parses a unit from a file stream.
-   * @exception Throws runtime_error exception when the file not found.
-  */
-  static Character* parseUnitFromStream(std::fstream& fileStream);
+ static  Character* parseUnitFromFile(std::string fileName);
 };
 
 

@@ -1,4 +1,5 @@
 #!/bin/bash
-if grep --quiet "warning" "./cppcheck_results.txt"
-then exit 1
+if grep -q "warning" "cppcheck_results.txt"
+then
+	exit 1
 fi

@@ -2,5 +2,8 @@
   "name" : "Mapple",
   "hp" : 1500,
   "dmg" : 80,
-  "attackcooldown" : 1
+  "attackcooldown" : 2.9,
+  "position_row" : 4,
+  "position_column" : 8,
+  "number":3
 }

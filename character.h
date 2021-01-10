@@ -16,6 +16,10 @@ private:
   */
   std::string name;
 
+  int position_row;
+  int position_column;
+  int number;
+
   /**
    * Attack cooldown of the character.
    * It shows that the character can attack after this many *seconds*.
@@ -39,10 +43,6 @@ protected:
   */
   float damage;
 
-  /**
-   * Experience points that the character has.
-  */
-  unsigned int xp;
 public:
   /**
    * An other character attacks this charater.
@@ -57,11 +57,18 @@ public:
    * @param health Health of the character.
    * @param damage Damage of the character.
    * @param attackcooldown Attack cooldown of the character.
+   * @param number The number that represents this character. 2 is player and up from 3 are enemies.
   */
   Character(const std::string& name,
-            unsigned int health,
+            const unsigned int health,
             float damage,
-            float attackcooldown);
+            float attackcooldown,
+            int position_row,
+            int position_column,
+            int number);
+
+  explicit Character(Character* character);
+  Character();
 
   /**
    * Destructor for character.
@@ -99,17 +106,13 @@ public:
   */
   bool IsAlive();
 
-  /**
-   * @return How many xp the character has.
-  */
-  int GetXp() const;
 
-  /**
-   * Operator overload to write the characters details nicely.
-   * @param os Is the stream where to write.
-   * @param character The character to write.
-  */
-  friend std::ostream& operator<<(std::ostream& os, const Character* character);
+  int GetPositionRow();
+  int GetPositionColumn();
+  int GetNumber();
+  void SetNumber(int number);
+  void SetPositionRow(int number);
+  void SetPositionColumn(int number);
 };
 
 #endif //CHARACTER_H

@@ -2,5 +2,8 @@
   "name" : "Sammy",
   "hp" : 45,
   "dmg" : 300,
-  "attackcooldown" : 4.2
+  "attackcooldown" : 4.2,
+  "position_row" : 4,
+  "position_column" : 5,
+  "number":3
 }
