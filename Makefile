@@ -13,9 +13,6 @@ main.o: main.cpp character.h player.h jsonParser.h mapReader.h map.h game.h enem
 in_out_tests:
 	chmod +x check_units.sh && ./check_units.sh
 
-doxygen:
-	doxygen doxconf
-
 unit_tests:
 	cd tests && cmake . && make
 
