@@ -23,4 +23,4 @@ run_unit_tests:
 	cd tests && ./runUnitTests
 
 static_code_analysis:
-	cppcheck $(CPPFILES) --output-file=cppcheck_results.txt && chmod +x check_warning.sh && ./check_warning.sh && chmod +x check_error.sh && ./check_error.sh
+	cppcheck $(CPPFILES) --output-file=cppcheck_results.txt && chmod +x check_warning.sh && ./check_warning.sh && chmod +x check_error.sh && ./check_error.sh && valgrind --log-file="valgrind_output.txt" --leak-check=full ./a.out maps/map.csv units/unit1.json units/unit2.json

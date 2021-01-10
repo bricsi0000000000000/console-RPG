@@ -11,7 +11,6 @@
 */
 class JsonParser
 {
-private:
 public:
   /**
    * Parses a unit from a string.

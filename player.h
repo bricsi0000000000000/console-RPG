@@ -39,6 +39,9 @@ private:
   */
   unsigned int levelXp;
 
+  /**
+   * Players actual level.
+  */
   int level;
 
 public:
@@ -57,6 +60,10 @@ public:
          int position_column,
          int number);
 
+  /**
+   * Constructor for character.
+   * @param character Is a character from you want to build the player.
+  */
   explicit Player(Character* character);
 
   /**
@@ -74,8 +81,15 @@ public:
    * @return How many xp the character has.
   */
   int GetXp() const;
+
+  /**
+   * @return How many xp had the player at the current level.
+  */
   int GetLevelXp() const;
 
+  /**
+   * @return Level of the player.
+  */
   int GetLevel();
 };
 

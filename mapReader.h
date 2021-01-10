@@ -7,12 +7,27 @@
 
 #include "map.h"
 
+/**
+ * @class MapReader
+ * @brief Reads a map
+*/
 class MapReader
 {
-private:
 public:
+  /**
+   * Constructor for MapReader
+  */
   MapReader();
+
+  /**
+   * Destructor for MapReader
+  */
   ~MapReader();
+
+  /**
+   * Read a map from file.
+   * @param fileName Name of the maps file.
+  */
   Map ReadMap(std::string fileName);
 };
 

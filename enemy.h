@@ -29,8 +29,15 @@ public:
          int position_column,
          int number);
 
+  /**
+   * Constructor for enemy.
+   * @param character Is a character from you want to build the enemy.
+  */
   explicit Enemy(Character* character);
 
+  /**
+   * Empty constructor.
+  */
   Enemy();
 
   /**

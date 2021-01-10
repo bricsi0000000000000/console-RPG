@@ -23,8 +23,13 @@ jobs:
 
       - name: Static code analysis
         run: make static_code_analysis
-      - name: Upload code analysis result 
+      - name: Upload cppcheck result 
         uses: actions/upload-artifact@v2  
         with:
           name: cppcheck_results
           path: cppcheck_results.txt
+      - name: Upload valgrind result 
+        uses: actions/upload-artifact@v2  
+        with:
+          name: valgrind_output
+          path: valgrind_output.txt

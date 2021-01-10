@@ -16,8 +16,20 @@ private:
   */
   std::string name;
 
+  /**
+   * Row position on the map.
+  */
   int position_row;
+
+  /**
+   * Column position on the map.
+  */
   int position_column;
+
+  /**
+   * Number of the character.
+   * Typically 2 is Player and 3 is Enemy.
+  */
   int number;
 
   /**
@@ -67,7 +79,15 @@ public:
             int position_column,
             int number);
 
+  /**
+   * Constructor for character.
+   * @param character Is a character from you want to build the character.
+  */
   explicit Character(Character* character);
+
+  /**
+   * Empty constructor.
+  */
   Character();
 
   /**
@@ -106,12 +126,37 @@ public:
   */
   bool IsAlive();
 
-
+  /**
+   * @return The row position of the character.
+  */
   int GetPositionRow();
+
+  /**
+   * @return The column position of the character.
+  */
   int GetPositionColumn();
+
+  /**
+   * @return The number that represents this character on the map.
+  */
   int GetNumber();
+
+  /**
+   * Change the number of the character.
+   * @param number Number you want to change.
+  */
   void SetNumber(int number);
+
+  /**
+   * Sets the row position.
+   * @param number New row position you want to change.
+  */
   void SetPositionRow(int number);
+
+  /**
+   * Sets the column position.
+   * @param number New column position you want to change.
+  */
   void SetPositionColumn(int number);
 };
 
