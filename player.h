@@ -49,7 +49,7 @@ public:
    * @param damage Damage of the player.
    * @param attackcooldown Attack cooldown of the player.
   */
-  Player(std::string& name,
+  Player(std::string name,
          unsigned int health,
          float damage,
          float attackcooldown,

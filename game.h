@@ -17,10 +17,10 @@ private:
   std::vector<Enemy> enemies;
   void Start();
   void Update();
-  void Battle(Character* character1, Character* character2);
   void CheckMove(int row, int column);
   Enemy GetEnemy(int row_index, int column_index);
   void DisplayCharacter(Character* character);
+  void Battle(Character* character1, Character* character2);
 public:
   Game(const Map& map, Player* player, const std::vector<Enemy>& enemies);
   ~Game();

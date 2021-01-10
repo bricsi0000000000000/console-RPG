@@ -3,7 +3,7 @@
 #include "enemy.h"
 #include "character.h"
 
-Enemy::Enemy(std::string& name,
+Enemy::Enemy(std::string name,
              unsigned int health,
              float damage,
              float attackcooldown,
