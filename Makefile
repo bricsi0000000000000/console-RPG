@@ -1,13 +1,13 @@
-OBJECTS := main.o character.o player.o jsonParser.o mapReader.o map.o game.o
+OBJECTS := main.o character.o player.o jsonParser.o mapReader.o map.o game.o enemy.o
 COMPILERFLAGS := -std=c++17 -g -Wall -Werror -Wextra 
 COMPILER := g++
 
-CPPFILES := main.cpp character.cpp player.cpp jsonParser.cpp mapReader.cpp map.cpp game.cpp
+CPPFILES := main.cpp character.cpp player.cpp jsonParser.cpp mapReader.cpp map.cpp game.cpp enemy.cpp
 
 build: $(OBJECTS)
 	$(COMPILER) $(COMPILERFLAGS) -o a.out $(OBJECTS)
 
-main.o: main.cpp character.h player.h jsonParser.h mapReader.h map.h game.h
+main.o: main.cpp character.h player.h jsonParser.h mapReader.h map.h game.h enemy.h
 	$(COMPILER) $(COMPILERFLAGS) -c main.cpp
 
 in_out_tests:
