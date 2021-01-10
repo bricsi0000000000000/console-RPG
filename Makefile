@@ -20,4 +20,4 @@ run_unit_tests:
 	cd tests && ./runUnitTests
 
 static_code_analysis:
-	cppcheck $(CPPFILES) --output-file=cppcheck_results.txt && chmod +x check_warning.sh && ./check_warning.sh && chmod +x check_error.sh && ./check_error.sh && ./valgrind_play_game.sh
+	cppcheck $(CPPFILES) --output-file=cppcheck_results.txt && chmod +x check_warning.sh && ./check_warning.sh && chmod +x check_error.sh && ./check_error.sh && chmod +x valgrind_play_game.sh && ./valgrind_play_game.sh
