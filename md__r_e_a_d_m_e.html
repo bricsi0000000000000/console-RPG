@@ -306,6 +306,48 @@ Példa egy játékra</h2>
 <div class="line">Directions: w,a,s,d</div>
 <div class="line">Step:</div>
 <div class="line">Exiting game..</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md8"></a>
+Docker images amiket használtam</h2>
+<h3><a class="anchor" id="autotoc_md9"></a>
+Build program workflow</h3>
+<div class="fragment"><div class="line">FROM ubuntu:20.04</div>
+<div class="line"> </div>
+<div class="line">RUN apt update \</div>
+<div class="line"> &amp;&amp; DEBIAN_FRONTEND=noninteractive apt install -y \</div>
+<div class="line">  make \</div>
+<div class="line">  cmake \</div>
+<div class="line">  cppcheck \</div>
+<div class="line">  g++ \</div>
+<div class="line">  git \</div>
+<div class="line">  valgrind \</div>
+<div class="line">&amp;&amp; rm -rf /var/lib/apt/lists<span class="comment">/*</span></div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md10"></a>
+Google unit test workflow</h3>
+<div class="fragment"><div class="line">FROM ubuntu:20.04</div>
+<div class="line"> </div>
+<div class="line">RUN apt update \</div>
+<div class="line"> &amp;&amp; DEBIAN_FRONTEND=noninteractive apt install -y \</div>
+<div class="line">    make \</div>
+<div class="line">    cmake \</div>
+<div class="line">    git \</div>
+<div class="line">    libgtest-dev \</div>
+<div class="line">    gcc g++ \</div>
+<div class="line"> &amp;&amp; cd /usr/src/gtest \</div>
+<div class="line"> &amp;&amp; cmake CMakeLists.txt \</div>
+<div class="line"> &amp;&amp; make \</div>
+<div class="line"> &amp;&amp; ln -st /usr/lib/ /usr/src/gtest/libgtest.a \</div>
+<div class="line"> &amp;&amp; ln -st /usr/lib/ /usr/src/gtest/libgtest_main.a \</div>
+<div class="line"> &amp;&amp; rm -rf /var/lib/apt/lists<span class="comment">/*</span></div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md11"></a>
+Doxygen workflow</h3>
+<div class="fragment"><div class="line">FROM ubuntu:20.04</div>
+<div class="line"> </div>
+<div class="line">RUN apt update \</div>
+<div class="line"> &amp;&amp; DEBIAN_FRONTEND=noninteractive apt install -y \</div>
+<div class="line">  doxygen \</div>
+<div class="line">  graphviz \</div>
+<div class="line">  git \</div>
+<div class="line">&amp;&amp; rm -rf /var/lib/apt/lists<span class="comment">/*</span></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
