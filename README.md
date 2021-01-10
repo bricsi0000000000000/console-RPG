@@ -244,3 +244,54 @@ Directions: w,a,s,d
 Step:
 Exiting game..
 ```
+
+### Docker images amiket használtam
+
+#### Build program workflow
+
+```Dockerfile
+FROM ubuntu:20.04
+
+RUN apt update \
+ && DEBIAN_FRONTEND=noninteractive apt install -y \
+  make \
+  cmake \
+  cppcheck \
+  g++ \
+  git \
+  valgrind \
+&& rm -rf /var/lib/apt/lists/*
+```
+
+#### Google unit test workflow
+
+```Dockerfile
+FROM ubuntu:20.04
+
+RUN apt update \
+ && DEBIAN_FRONTEND=noninteractive apt install -y \
+    make \
+    cmake \
+    git \
+    libgtest-dev \
+    gcc g++ \
+ && cd /usr/src/gtest \
+ && cmake CMakeLists.txt \
+ && make \
+ && ln -st /usr/lib/ /usr/src/gtest/libgtest.a \
+ && ln -st /usr/lib/ /usr/src/gtest/libgtest_main.a \
+ && rm -rf /var/lib/apt/lists/*
+```
+
+#### Doxygen workflow
+
+```Dockerfile
+FROM ubuntu:20.04
+
+RUN apt update \
+ && DEBIAN_FRONTEND=noninteractive apt install -y \
+  doxygen \
+  graphviz \
+  git \
+&& rm -rf /var/lib/apt/lists/*
+```
