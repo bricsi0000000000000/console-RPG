@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['konzolos_20rpg_20játék_16',['Konzolos RPG játék',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['jsonparser_30',['JsonParser',['../class_json_parser.html',1,'JsonParser'],['../class_json_parser.html#af21abdfb0ceac731e44d897a0285f5d4',1,'JsonParser::JsonParser()']]]
 ];

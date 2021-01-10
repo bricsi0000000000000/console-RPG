@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['maxhealth_66',['maxHealth',['../class_character.html#abf8ea4a4b78c3e3aeccd3345c4073a26',1,'Character']]]
+  ['gameisrunning_123',['gameIsRunning',['../class_game.html#a2df5eb7e80499776ffecb2be6d00aee2',1,'Game']]]
 ];

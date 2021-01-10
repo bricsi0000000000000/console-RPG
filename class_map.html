@@ -72,43 +72,376 @@ $(function() {
 <div class="title">Map Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Represents a map where the game will be played on.  
+ <a href="class_map.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="map_8h_source.html">map.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6b43adb910b24e775d12d04dcf80d691"><td class="memItemLeft" align="right" valign="top"><a id="a6b43adb910b24e775d12d04dcf80d691"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Map</b> (const std::string &amp;name=&quot;&quot;, const two_d_vector &amp;cells={})</td></tr>
+<tr class="memitem:a6b43adb910b24e775d12d04dcf80d691"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a6b43adb910b24e775d12d04dcf80d691">Map</a> (const std::string &amp;<a class="el" href="class_map.html#a1b1d492ae94e6ce4f76536bd33d8123c">name</a>=&quot;&quot;, const two_d_vector &amp;<a class="el" href="class_map.html#a14aebe6d9131d4c3b67cb9bb60668fa8">cells</a>={})</td></tr>
 <tr class="separator:a6b43adb910b24e775d12d04dcf80d691"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7aaddaedbcbc69d0ffe2df60a1d14563"><td class="memItemLeft" align="right" valign="top"><a id="a7aaddaedbcbc69d0ffe2df60a1d14563"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetCell</b> (int row_index, int column_index, int value)</td></tr>
+<tr class="memitem:aa403fbe09394ccf39747588f5168e3b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#aa403fbe09394ccf39747588f5168e3b2">~Map</a> ()</td></tr>
+<tr class="separator:aa403fbe09394ccf39747588f5168e3b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aaddaedbcbc69d0ffe2df60a1d14563"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a7aaddaedbcbc69d0ffe2df60a1d14563">SetCell</a> (int row_index, int column_index, int value)</td></tr>
 <tr class="separator:a7aaddaedbcbc69d0ffe2df60a1d14563"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1afc9e2739a9cfe38445e6d3afc721fb"><td class="memItemLeft" align="right" valign="top"><a id="a1afc9e2739a9cfe38445e6d3afc721fb"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>GetCell</b> (int row, int column)</td></tr>
+<tr class="memitem:a1afc9e2739a9cfe38445e6d3afc721fb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a1afc9e2739a9cfe38445e6d3afc721fb">GetCell</a> (int row, int column)</td></tr>
 <tr class="separator:a1afc9e2739a9cfe38445e6d3afc721fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfc6a2d0c463fb198c610c3614377060"><td class="memItemLeft" align="right" valign="top"><a id="adfc6a2d0c463fb198c610c3614377060"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Display</b> ()</td></tr>
+<tr class="memitem:adfc6a2d0c463fb198c610c3614377060"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#adfc6a2d0c463fb198c610c3614377060">Display</a> ()</td></tr>
 <tr class="separator:adfc6a2d0c463fb198c610c3614377060"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1de0f97b9c754836502997231780fd0b"><td class="memItemLeft" align="right" valign="top"><a id="a1de0f97b9c754836502997231780fd0b"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetName</b> ()</td></tr>
+<tr class="memitem:a1de0f97b9c754836502997231780fd0b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a1de0f97b9c754836502997231780fd0b">GetName</a> ()</td></tr>
 <tr class="separator:a1de0f97b9c754836502997231780fd0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a349fe813ceb3caf54afaee8f739bdd2f"><td class="memItemLeft" align="right" valign="top"><a id="a349fe813ceb3caf54afaee8f739bdd2f"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>Move</b> (int character_number, int row_index, int column_index)</td></tr>
+<tr class="memitem:a349fe813ceb3caf54afaee8f739bdd2f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a349fe813ceb3caf54afaee8f739bdd2f">Move</a> (int character_number, int row_index, int column_index)</td></tr>
 <tr class="separator:a349fe813ceb3caf54afaee8f739bdd2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a78168267ef560ed84f271b5f26a04f33"><td class="memItemLeft" align="right" valign="top"><a id="a78168267ef560ed84f271b5f26a04f33"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearValue</b> (int value)</td></tr>
+<tr class="memitem:a78168267ef560ed84f271b5f26a04f33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a78168267ef560ed84f271b5f26a04f33">ClearValue</a> (int value)</td></tr>
 <tr class="separator:a78168267ef560ed84f271b5f26a04f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a1b1d492ae94e6ce4f76536bd33d8123c"><td class="memItemLeft" align="right" valign="top"><a id="a1b1d492ae94e6ce4f76536bd33d8123c"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
+<tr class="memitem:a1b1d492ae94e6ce4f76536bd33d8123c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a1b1d492ae94e6ce4f76536bd33d8123c">name</a></td></tr>
 <tr class="separator:a1b1d492ae94e6ce4f76536bd33d8123c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14aebe6d9131d4c3b67cb9bb60668fa8"><td class="memItemLeft" align="right" valign="top"><a id="a14aebe6d9131d4c3b67cb9bb60668fa8"></a>
-two_d_vector&#160;</td><td class="memItemRight" valign="bottom"><b>cells</b></td></tr>
+<tr class="memitem:a14aebe6d9131d4c3b67cb9bb60668fa8"><td class="memItemLeft" align="right" valign="top">two_d_vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a14aebe6d9131d4c3b67cb9bb60668fa8">cells</a></td></tr>
 <tr class="separator:a14aebe6d9131d4c3b67cb9bb60668fa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a map where the game will be played on. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a6b43adb910b24e775d12d04dcf80d691"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b43adb910b24e775d12d04dcf80d691">&#9670;&nbsp;</a></span>Map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Map::Map </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const two_d_vector &amp;&#160;</td>
+          <td class="paramname"><em>cells</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constructor for map. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name if the map. Default is an empy string. </td></tr>
+    <tr><td class="paramname">cells</td><td>Cells of the map. Default is an empty two dimensional vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa403fbe09394ccf39747588f5168e3b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa403fbe09394ccf39747588f5168e3b2">&#9670;&nbsp;</a></span>~Map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Map::~Map </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Destructor for map. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a78168267ef560ed84f271b5f26a04f33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78168267ef560ed84f271b5f26a04f33">&#9670;&nbsp;</a></span>ClearValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Map::ClearValue </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Clears a cells value. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_map_a78168267ef560ed84f271b5f26a04f33_icgraph.png" border="0" usemap="#class_map_a78168267ef560ed84f271b5f26a04f33_icgraph" alt=""/></div>
+<map name="class_map_a78168267ef560ed84f271b5f26a04f33_icgraph" id="class_map_a78168267ef560ed84f271b5f26a04f33_icgraph">
+<area shape="rect" title=" " alt="" coords="817,31,945,57"/>
+<area shape="rect" href="class_map.html#a349fe813ceb3caf54afaee8f739bdd2f" title=" " alt="" coords="675,31,769,57"/>
+<area shape="rect" href="class_game.html#aabc09ebc1b2b9f56396ffb14154caa6d" title=" " alt="" coords="519,5,627,32"/>
+<area shape="rect" href="class_game.html#af6c54df85442fd6e27729772e6b4ab3b" title=" " alt="" coords="325,31,471,57"/>
+<area shape="rect" href="class_game.html#a1c5373c68261c54aff03e6abe40fee52" title=" " alt="" coords="161,31,277,57"/>
+<area shape="rect" href="class_game.html#a831a5167970f38dd986aad7db1369fd9" title=" " alt="" coords="5,31,113,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adfc6a2d0c463fb198c610c3614377060"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfc6a2d0c463fb198c610c3614377060">&#9670;&nbsp;</a></span>Display()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Map::Display </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Displays the map. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_map_adfc6a2d0c463fb198c610c3614377060_icgraph.png" border="0" usemap="#class_map_adfc6a2d0c463fb198c610c3614377060_icgraph" alt=""/></div>
+<map name="class_map_adfc6a2d0c463fb198c610c3614377060_icgraph" id="class_map_adfc6a2d0c463fb198c610c3614377060_icgraph">
+<area shape="rect" title=" " alt="" coords="325,5,432,32"/>
+<area shape="rect" href="class_game.html#a1c5373c68261c54aff03e6abe40fee52" title=" " alt="" coords="161,5,277,32"/>
+<area shape="rect" href="class_game.html#a831a5167970f38dd986aad7db1369fd9" title=" " alt="" coords="5,5,113,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1afc9e2739a9cfe38445e6d3afc721fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1afc9e2739a9cfe38445e6d3afc721fb">&#9670;&nbsp;</a></span>GetCell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Map::GetCell </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>column</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns a cells value on the specific coordinate. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_map_a1afc9e2739a9cfe38445e6d3afc721fb_icgraph.png" border="0" usemap="#class_map_a1afc9e2739a9cfe38445e6d3afc721fb_icgraph" alt=""/></div>
+<map name="class_map_a1afc9e2739a9cfe38445e6d3afc721fb_icgraph" id="class_map_a1afc9e2739a9cfe38445e6d3afc721fb_icgraph">
+<area shape="rect" title=" " alt="" coords="817,31,924,57"/>
+<area shape="rect" href="class_map.html#a349fe813ceb3caf54afaee8f739bdd2f" title=" " alt="" coords="675,31,769,57"/>
+<area shape="rect" href="class_game.html#aabc09ebc1b2b9f56396ffb14154caa6d" title=" " alt="" coords="519,5,627,32"/>
+<area shape="rect" href="class_game.html#af6c54df85442fd6e27729772e6b4ab3b" title=" " alt="" coords="325,31,471,57"/>
+<area shape="rect" href="class_game.html#a1c5373c68261c54aff03e6abe40fee52" title=" " alt="" coords="161,31,277,57"/>
+<area shape="rect" href="class_game.html#a831a5167970f38dd986aad7db1369fd9" title=" " alt="" coords="5,31,113,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1de0f97b9c754836502997231780fd0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1de0f97b9c754836502997231780fd0b">&#9670;&nbsp;</a></span>GetName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Map::GetName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The name of the map. </dd></dl>
+
+</div>
+</div>
+<a id="a349fe813ceb3caf54afaee8f739bdd2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a349fe813ceb3caf54afaee8f739bdd2f">&#9670;&nbsp;</a></span>Move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Map::Move </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>character_number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>column_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Moves a character to the specific coordinate. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">character_number</td><td>The characters number you want to move. </td></tr>
+    <tr><td class="paramname">row_index</td><td>The row index where you want to move the character. </td></tr>
+    <tr><td class="paramname">column_index</td><td>The column index where you want to move the character. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_map_a349fe813ceb3caf54afaee8f739bdd2f_icgraph.png" border="0" usemap="#class_map_a349fe813ceb3caf54afaee8f739bdd2f_icgraph" alt=""/></div>
+<map name="class_map_a349fe813ceb3caf54afaee8f739bdd2f_icgraph" id="class_map_a349fe813ceb3caf54afaee8f739bdd2f_icgraph">
+<area shape="rect" title=" " alt="" coords="675,31,769,57"/>
+<area shape="rect" href="class_game.html#aabc09ebc1b2b9f56396ffb14154caa6d" title=" " alt="" coords="519,5,627,32"/>
+<area shape="rect" href="class_game.html#af6c54df85442fd6e27729772e6b4ab3b" title=" " alt="" coords="325,31,471,57"/>
+<area shape="rect" href="class_game.html#a1c5373c68261c54aff03e6abe40fee52" title=" " alt="" coords="161,31,277,57"/>
+<area shape="rect" href="class_game.html#a831a5167970f38dd986aad7db1369fd9" title=" " alt="" coords="5,31,113,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7aaddaedbcbc69d0ffe2df60a1d14563"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aaddaedbcbc69d0ffe2df60a1d14563">&#9670;&nbsp;</a></span>SetCell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Map::SetCell </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>column_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets a cells value on the specific coordinate. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_map_a7aaddaedbcbc69d0ffe2df60a1d14563_icgraph.png" border="0" usemap="#class_map_a7aaddaedbcbc69d0ffe2df60a1d14563_icgraph" alt=""/></div>
+<map name="class_map_a7aaddaedbcbc69d0ffe2df60a1d14563_icgraph" id="class_map_a7aaddaedbcbc69d0ffe2df60a1d14563_icgraph">
+<area shape="rect" title=" " alt="" coords="993,56,1097,83"/>
+<area shape="rect" href="class_game.html#aabc09ebc1b2b9f56396ffb14154caa6d" title=" " alt="" coords="519,5,627,32"/>
+<area shape="rect" href="class_map.html#a78168267ef560ed84f271b5f26a04f33" title=" " alt="" coords="817,56,945,83"/>
+<area shape="rect" href="class_map.html#a349fe813ceb3caf54afaee8f739bdd2f" title=" " alt="" coords="675,56,769,83"/>
+<area shape="rect" href="class_game.html#af6c54df85442fd6e27729772e6b4ab3b" title=" " alt="" coords="325,31,471,57"/>
+<area shape="rect" href="class_game.html#a1c5373c68261c54aff03e6abe40fee52" title=" " alt="" coords="161,31,277,57"/>
+<area shape="rect" href="class_game.html#a831a5167970f38dd986aad7db1369fd9" title=" " alt="" coords="5,31,113,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a14aebe6d9131d4c3b67cb9bb60668fa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14aebe6d9131d4c3b67cb9bb60668fa8">&#9670;&nbsp;</a></span>cells</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">two_d_vector Map::cells</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Cells on the map. </p>
+
+</div>
+</div>
+<a id="a1b1d492ae94e6ce4f76536bd33d8123c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b1d492ae94e6ce4f76536bd33d8123c">&#9670;&nbsp;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Map::name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Maps name. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="map_8h_source.html">map.h</a></li>
 <li>map.cpp</li>

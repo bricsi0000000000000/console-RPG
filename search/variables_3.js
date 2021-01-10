@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['levelxp_65',['levelXp',['../class_player.html#adf07691798b87a93c1aa27ba5215fcfe',1,'Player']]]
+  ['enemies_122',['enemies',['../class_game.html#ab5ebf8d858e27bc2995e88f05fb50774',1,'Game']]]
 ];

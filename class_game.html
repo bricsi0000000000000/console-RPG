@@ -72,13 +72,18 @@ $(function() {
 <div class="title">Game Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Represents the logic of the game.  
+ <a href="class_game.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="game_8h_source.html">game.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for Game:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game__coll__graph.png" border="0" usemap="#_game_coll__map" alt="Collaboration graph"/></div>
 <map name="_game_coll__map" id="_game_coll__map">
-<area shape="rect" title=" " alt="" coords="32,171,93,197"/>
-<area shape="rect" href="class_map.html" title=" " alt="" coords="5,81,56,108"/>
+<area shape="rect" title="Represents the logic of the game." alt="" coords="32,171,93,197"/>
+<area shape="rect" href="class_map.html" title="Represents a map where the game will be played on." alt="" coords="5,81,56,108"/>
 <area shape="rect" href="class_player.html" title="Represents a player that is derived from Character." alt="" coords="81,81,143,108"/>
 <area shape="rect" href="class_character.html" title="Represents a character. A Character can attack an other character." alt="" coords="69,5,155,32"/>
 </map>
@@ -86,46 +91,458 @@ Collaboration diagram for Game:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a831a5167970f38dd986aad7db1369fd9"><td class="memItemLeft" align="right" valign="top"><a id="a831a5167970f38dd986aad7db1369fd9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Game</b> (const <a class="el" href="class_map.html">Map</a> &amp;map, <a class="el" href="class_player.html">Player</a> *player, const std::vector&lt; <a class="el" href="class_enemy.html">Enemy</a> &gt; &amp;enemies)</td></tr>
+<tr class="memitem:a831a5167970f38dd986aad7db1369fd9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a831a5167970f38dd986aad7db1369fd9">Game</a> (const <a class="el" href="class_map.html">Map</a> &amp;<a class="el" href="class_game.html#ab910de42d0cf4238d9d20815de472523">map</a>, <a class="el" href="class_player.html">Player</a> *<a class="el" href="class_game.html#abec70aa1c0269a9a7e171af4d79e08bf">player</a>, const std::vector&lt; <a class="el" href="class_enemy.html">Enemy</a> &gt; &amp;<a class="el" href="class_game.html#ab5ebf8d858e27bc2995e88f05fb50774">enemies</a>)</td></tr>
 <tr class="separator:a831a5167970f38dd986aad7db1369fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3d112ca6e0e55150d2fdbc704474530"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ae3d112ca6e0e55150d2fdbc704474530">~Game</a> ()</td></tr>
+<tr class="separator:ae3d112ca6e0e55150d2fdbc704474530"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:adb05b20574551a26f8cf1dc664782790"><td class="memItemLeft" align="right" valign="top"><a id="adb05b20574551a26f8cf1dc664782790"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Start</b> ()</td></tr>
+<tr class="memitem:adb05b20574551a26f8cf1dc664782790"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#adb05b20574551a26f8cf1dc664782790">Start</a> ()</td></tr>
 <tr class="separator:adb05b20574551a26f8cf1dc664782790"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c5373c68261c54aff03e6abe40fee52"><td class="memItemLeft" align="right" valign="top"><a id="a1c5373c68261c54aff03e6abe40fee52"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> ()</td></tr>
+<tr class="memitem:a1c5373c68261c54aff03e6abe40fee52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a1c5373c68261c54aff03e6abe40fee52">Update</a> ()</td></tr>
 <tr class="separator:a1c5373c68261c54aff03e6abe40fee52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6c54df85442fd6e27729772e6b4ab3b"><td class="memItemLeft" align="right" valign="top"><a id="af6c54df85442fd6e27729772e6b4ab3b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>CheckMove</b> (int row, int column)</td></tr>
+<tr class="memitem:af6c54df85442fd6e27729772e6b4ab3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#af6c54df85442fd6e27729772e6b4ab3b">CheckMove</a> (int row, int column)</td></tr>
 <tr class="separator:af6c54df85442fd6e27729772e6b4ab3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06fa80b58d79e0e6b2154defc271338e"><td class="memItemLeft" align="right" valign="top"><a id="a06fa80b58d79e0e6b2154defc271338e"></a>
-<a class="el" href="class_enemy.html">Enemy</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetEnemy</b> (int row_index, int column_index)</td></tr>
+<tr class="memitem:a06fa80b58d79e0e6b2154defc271338e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_enemy.html">Enemy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a06fa80b58d79e0e6b2154defc271338e">GetEnemy</a> (int row_index, int column_index)</td></tr>
 <tr class="separator:a06fa80b58d79e0e6b2154defc271338e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac292db96ddb8c94270b5124c2fc94e7f"><td class="memItemLeft" align="right" valign="top"><a id="ac292db96ddb8c94270b5124c2fc94e7f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DisplayCharacter</b> (<a class="el" href="class_character.html">Character</a> *character)</td></tr>
+<tr class="memitem:ac292db96ddb8c94270b5124c2fc94e7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ac292db96ddb8c94270b5124c2fc94e7f">DisplayCharacter</a> (<a class="el" href="class_character.html">Character</a> *character)</td></tr>
 <tr class="separator:ac292db96ddb8c94270b5124c2fc94e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabc09ebc1b2b9f56396ffb14154caa6d"><td class="memItemLeft" align="right" valign="top"><a id="aabc09ebc1b2b9f56396ffb14154caa6d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Battle</b> (<a class="el" href="class_character.html">Character</a> *character1, <a class="el" href="class_character.html">Character</a> *character2)</td></tr>
+<tr class="memitem:aabc09ebc1b2b9f56396ffb14154caa6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#aabc09ebc1b2b9f56396ffb14154caa6d">Battle</a> (<a class="el" href="class_character.html">Character</a> *character1, <a class="el" href="class_character.html">Character</a> *character2)</td></tr>
 <tr class="separator:aabc09ebc1b2b9f56396ffb14154caa6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a2df5eb7e80499776ffecb2be6d00aee2"><td class="memItemLeft" align="right" valign="top"><a id="a2df5eb7e80499776ffecb2be6d00aee2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>gameIsRunning</b></td></tr>
+<tr class="memitem:a2df5eb7e80499776ffecb2be6d00aee2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a2df5eb7e80499776ffecb2be6d00aee2">gameIsRunning</a></td></tr>
 <tr class="separator:a2df5eb7e80499776ffecb2be6d00aee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab910de42d0cf4238d9d20815de472523"><td class="memItemLeft" align="right" valign="top"><a id="ab910de42d0cf4238d9d20815de472523"></a>
-<a class="el" href="class_map.html">Map</a>&#160;</td><td class="memItemRight" valign="bottom"><b>map</b></td></tr>
+<tr class="memitem:ab910de42d0cf4238d9d20815de472523"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_map.html">Map</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ab910de42d0cf4238d9d20815de472523">map</a></td></tr>
 <tr class="separator:ab910de42d0cf4238d9d20815de472523"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abec70aa1c0269a9a7e171af4d79e08bf"><td class="memItemLeft" align="right" valign="top"><a id="abec70aa1c0269a9a7e171af4d79e08bf"></a>
-<a class="el" href="class_player.html">Player</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>player</b></td></tr>
+<tr class="memitem:abec70aa1c0269a9a7e171af4d79e08bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_player.html">Player</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#abec70aa1c0269a9a7e171af4d79e08bf">player</a></td></tr>
 <tr class="separator:abec70aa1c0269a9a7e171af4d79e08bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5ebf8d858e27bc2995e88f05fb50774"><td class="memItemLeft" align="right" valign="top"><a id="ab5ebf8d858e27bc2995e88f05fb50774"></a>
-std::vector&lt; <a class="el" href="class_enemy.html">Enemy</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>enemies</b></td></tr>
+<tr class="memitem:ab5ebf8d858e27bc2995e88f05fb50774"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_enemy.html">Enemy</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ab5ebf8d858e27bc2995e88f05fb50774">enemies</a></td></tr>
 <tr class="separator:ab5ebf8d858e27bc2995e88f05fb50774"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents the logic of the game. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a831a5167970f38dd986aad7db1369fd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a831a5167970f38dd986aad7db1369fd9">&#9670;&nbsp;</a></span>Game()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Game::Game </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_map.html">Map</a> &amp;&#160;</td>
+          <td class="paramname"><em>map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_player.html">Player</a> *&#160;</td>
+          <td class="paramname"><em>player</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_enemy.html">Enemy</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>enemies</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constructor for game. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">map</td><td>The map where the game will be played. </td></tr>
+    <tr><td class="paramname">player</td><td>The player with whom the user will play. </td></tr>
+    <tr><td class="paramname">enemies</td><td>Enemies on the map. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae3d112ca6e0e55150d2fdbc704474530"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3d112ca6e0e55150d2fdbc704474530">&#9670;&nbsp;</a></span>~Game()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Game::~Game </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Destructor for game. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aabc09ebc1b2b9f56396ffb14154caa6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabc09ebc1b2b9f56396ffb14154caa6d">&#9670;&nbsp;</a></span>Battle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Game::Battle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_character.html">Character</a> *&#160;</td>
+          <td class="paramname"><em>character1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_character.html">Character</a> *&#160;</td>
+          <td class="paramname"><em>character2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Duels two characters until one of them dies. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_aabc09ebc1b2b9f56396ffb14154caa6d_icgraph.png" border="0" usemap="#class_game_aabc09ebc1b2b9f56396ffb14154caa6d_icgraph" alt=""/></div>
+<map name="class_game_aabc09ebc1b2b9f56396ffb14154caa6d_icgraph" id="class_game_aabc09ebc1b2b9f56396ffb14154caa6d_icgraph">
+<area shape="rect" title=" " alt="" coords="519,5,627,32"/>
+<area shape="rect" href="class_game.html#af6c54df85442fd6e27729772e6b4ab3b" title=" " alt="" coords="325,5,471,32"/>
+<area shape="rect" href="class_game.html#a1c5373c68261c54aff03e6abe40fee52" title=" " alt="" coords="161,5,277,32"/>
+<area shape="rect" href="class_game.html#a831a5167970f38dd986aad7db1369fd9" title=" " alt="" coords="5,5,113,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af6c54df85442fd6e27729772e6b4ab3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6c54df85442fd6e27729772e6b4ab3b">&#9670;&nbsp;</a></span>CheckMove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Game::CheckMove </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>column</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Checks if the move is valid and decides what will happen next. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">row</td><td>How many cells step in tha players row. </td></tr>
+    <tr><td class="paramname">column</td><td>How many cells step in tha players column. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_af6c54df85442fd6e27729772e6b4ab3b_icgraph.png" border="0" usemap="#class_game_af6c54df85442fd6e27729772e6b4ab3b_icgraph" alt=""/></div>
+<map name="class_game_af6c54df85442fd6e27729772e6b4ab3b_icgraph" id="class_game_af6c54df85442fd6e27729772e6b4ab3b_icgraph">
+<area shape="rect" title=" " alt="" coords="325,5,471,32"/>
+<area shape="rect" href="class_game.html#a1c5373c68261c54aff03e6abe40fee52" title=" " alt="" coords="161,5,277,32"/>
+<area shape="rect" href="class_game.html#a831a5167970f38dd986aad7db1369fd9" title=" " alt="" coords="5,5,113,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac292db96ddb8c94270b5124c2fc94e7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac292db96ddb8c94270b5124c2fc94e7f">&#9670;&nbsp;</a></span>DisplayCharacter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Game::DisplayCharacter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_character.html">Character</a> *&#160;</td>
+          <td class="paramname"><em>character</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Displays informations from the character. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_ac292db96ddb8c94270b5124c2fc94e7f_icgraph.png" border="0" usemap="#class_game_ac292db96ddb8c94270b5124c2fc94e7f_icgraph" alt=""/></div>
+<map name="class_game_ac292db96ddb8c94270b5124c2fc94e7f_icgraph" id="class_game_ac292db96ddb8c94270b5124c2fc94e7f_icgraph">
+<area shape="rect" title=" " alt="" coords="519,31,700,57"/>
+<area shape="rect" href="class_game.html#af6c54df85442fd6e27729772e6b4ab3b" title=" " alt="" coords="325,5,471,32"/>
+<area shape="rect" href="class_game.html#a1c5373c68261c54aff03e6abe40fee52" title=" " alt="" coords="161,31,277,57"/>
+<area shape="rect" href="class_game.html#a831a5167970f38dd986aad7db1369fd9" title=" " alt="" coords="5,31,113,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a06fa80b58d79e0e6b2154defc271338e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06fa80b58d79e0e6b2154defc271338e">&#9670;&nbsp;</a></span>GetEnemy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_enemy.html">Enemy</a> Game::GetEnemy </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>column_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>An enemy from enemies. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">row_index</td><td>Row index of the findable enemy. </td></tr>
+    <tr><td class="paramname">column_index</td><td>Column index of the findable enemy. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_a06fa80b58d79e0e6b2154defc271338e_icgraph.png" border="0" usemap="#class_game_a06fa80b58d79e0e6b2154defc271338e_icgraph" alt=""/></div>
+<map name="class_game_a06fa80b58d79e0e6b2154defc271338e_icgraph" id="class_game_a06fa80b58d79e0e6b2154defc271338e_icgraph">
+<area shape="rect" title=" " alt="" coords="519,5,656,32"/>
+<area shape="rect" href="class_game.html#af6c54df85442fd6e27729772e6b4ab3b" title=" " alt="" coords="325,5,471,32"/>
+<area shape="rect" href="class_game.html#a1c5373c68261c54aff03e6abe40fee52" title=" " alt="" coords="161,5,277,32"/>
+<area shape="rect" href="class_game.html#a831a5167970f38dd986aad7db1369fd9" title=" " alt="" coords="5,5,113,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adb05b20574551a26f8cf1dc664782790"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb05b20574551a26f8cf1dc664782790">&#9670;&nbsp;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Game::Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Starts the game. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_adb05b20574551a26f8cf1dc664782790_icgraph.png" border="0" usemap="#class_game_adb05b20574551a26f8cf1dc664782790_icgraph" alt=""/></div>
+<map name="class_game_adb05b20574551a26f8cf1dc664782790_icgraph" id="class_game_adb05b20574551a26f8cf1dc664782790_icgraph">
+<area shape="rect" title=" " alt="" coords="161,5,261,32"/>
+<area shape="rect" href="class_game.html#a831a5167970f38dd986aad7db1369fd9" title=" " alt="" coords="5,5,113,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1c5373c68261c54aff03e6abe40fee52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c5373c68261c54aff03e6abe40fee52">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Game::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Runs the games logic. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_a1c5373c68261c54aff03e6abe40fee52_icgraph.png" border="0" usemap="#class_game_a1c5373c68261c54aff03e6abe40fee52_icgraph" alt=""/></div>
+<map name="class_game_a1c5373c68261c54aff03e6abe40fee52_icgraph" id="class_game_a1c5373c68261c54aff03e6abe40fee52_icgraph">
+<area shape="rect" title=" " alt="" coords="161,5,277,32"/>
+<area shape="rect" href="class_game.html#a831a5167970f38dd986aad7db1369fd9" title=" " alt="" coords="5,5,113,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab5ebf8d858e27bc2995e88f05fb50774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5ebf8d858e27bc2995e88f05fb50774">&#9670;&nbsp;</a></span>enemies</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_enemy.html">Enemy</a>&gt; Game::enemies</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Enemies on the map. </p>
+
+</div>
+</div>
+<a id="a2df5eb7e80499776ffecb2be6d00aee2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2df5eb7e80499776ffecb2be6d00aee2">&#9670;&nbsp;</a></span>gameIsRunning</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Game::gameIsRunning</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>State of the game. If true, the game is running. If false, the game is over. </p>
+
+</div>
+</div>
+<a id="ab910de42d0cf4238d9d20815de472523"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab910de42d0cf4238d9d20815de472523">&#9670;&nbsp;</a></span>map</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_map.html">Map</a> Game::map</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="class_map.html" title="Represents a map where the game will be played on.">Map</a> where the game will be played. </p>
+
+</div>
+</div>
+<a id="abec70aa1c0269a9a7e171af4d79e08bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abec70aa1c0269a9a7e171af4d79e08bf">&#9670;&nbsp;</a></span>player</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_player.html">Player</a>* Game::player</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="class_player.html" title="Represents a player that is derived from Character.">Player</a> with whom the user will play. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="game_8h_source.html">game.h</a></li>
 <li>game.cpp</li>

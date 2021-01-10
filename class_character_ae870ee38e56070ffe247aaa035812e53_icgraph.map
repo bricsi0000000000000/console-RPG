@@ -1,0 +1,9 @@
+<map id="Character::GetAttackcooldown" name="Character::GetAttackcooldown">
+<area shape="rect" id="node1" title=" " alt="" coords="748,56,968,83"/>
+<area shape="rect" id="node2" href="$class_game.html#aabc09ebc1b2b9f56396ffb14154caa6d" title=" " alt="" coords="555,5,663,32"/>
+<area shape="rect" id="node6" href="$class_character.html#a35c732ef76d4d82c4cb78abadbde16d5" title=" " alt="" coords="531,56,687,83"/>
+<area shape="rect" id="node7" href="$class_game.html#ac292db96ddb8c94270b5124c2fc94e7f" title=" " alt="" coords="519,107,700,133"/>
+<area shape="rect" id="node3" href="$class_game.html#af6c54df85442fd6e27729772e6b4ab3b" title=" " alt="" coords="325,56,471,83"/>
+<area shape="rect" id="node4" href="$class_game.html#a1c5373c68261c54aff03e6abe40fee52" title=" " alt="" coords="161,81,277,108"/>
+<area shape="rect" id="node5" href="$class_game.html#a831a5167970f38dd986aad7db1369fd9" title=" " alt="" coords="5,81,113,108"/>
+</map>

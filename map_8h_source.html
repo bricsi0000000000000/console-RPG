@@ -73,34 +73,53 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">typedef</span> std::vector&lt;std::vector&lt;int&gt;&gt; two_d_vector;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_map.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_map.html">Map</a></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  std::string name;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  two_d_vector cells;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordtype">void</span> ClearValue(<span class="keywordtype">int</span> value);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="class_map.html">Map</a>(<span class="keyword">const</span> std::string&amp; name = <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">const</span> two_d_vector&amp; cells = {});</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  ~<a class="code" href="class_map.html">Map</a>();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordtype">void</span> SetCell(<span class="keywordtype">int</span> row_index, <span class="keywordtype">int</span> column_index, <span class="keywordtype">int</span> value);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keywordtype">int</span> GetCell(<span class="keywordtype">int</span> row, <span class="keywordtype">int</span> column);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordtype">void</span> Display();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  std::string GetName();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordtype">int</span> Move(<span class="keywordtype">int</span> character_number, <span class="keywordtype">int</span> row_index, <span class="keywordtype">int</span> column_index);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif //MAP_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">typedef</span> std::vector&lt;std::vector&lt;int&gt;&gt; two_d_vector;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_map.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_map.html">Map</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_map.html#a1b1d492ae94e6ce4f76536bd33d8123c">   22</a></span>&#160;  std::string <a class="code" href="class_map.html#a1b1d492ae94e6ce4f76536bd33d8123c">name</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_map.html#a14aebe6d9131d4c3b67cb9bb60668fa8">   27</a></span>&#160;  two_d_vector <a class="code" href="class_map.html#a14aebe6d9131d4c3b67cb9bb60668fa8">cells</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_map.html#a78168267ef560ed84f271b5f26a04f33">ClearValue</a>(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="class_map.html#a6b43adb910b24e775d12d04dcf80d691">Map</a>(<span class="keyword">const</span> std::string&amp; <a class="code" href="class_map.html#a1b1d492ae94e6ce4f76536bd33d8123c">name</a> = <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">const</span> two_d_vector&amp; <a class="code" href="class_map.html#a14aebe6d9131d4c3b67cb9bb60668fa8">cells</a> = {});</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <a class="code" href="class_map.html#aa403fbe09394ccf39747588f5168e3b2">~Map</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_map.html#a7aaddaedbcbc69d0ffe2df60a1d14563">SetCell</a>(<span class="keywordtype">int</span> row_index, <span class="keywordtype">int</span> column_index, <span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="class_map.html#a1afc9e2739a9cfe38445e6d3afc721fb">GetCell</a>(<span class="keywordtype">int</span> row, <span class="keywordtype">int</span> column);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_map.html#adfc6a2d0c463fb198c610c3614377060">Display</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  std::string <a class="code" href="class_map.html#a1de0f97b9c754836502997231780fd0b">GetName</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="class_map.html#a349fe813ceb3caf54afaee8f739bdd2f">Move</a>(<span class="keywordtype">int</span> character_number, <span class="keywordtype">int</span> row_index, <span class="keywordtype">int</span> column_index);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif //MAP_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_map_html_a349fe813ceb3caf54afaee8f739bdd2f"><div class="ttname"><a href="class_map.html#a349fe813ceb3caf54afaee8f739bdd2f">Map::Move</a></div><div class="ttdeci">int Move(int character_number, int row_index, int column_index)</div><div class="ttdef"><b>Definition:</b> map.cpp:67</div></div>
 <div class="ttc" id="aclass_character_html"><div class="ttname"><a href="class_character.html">Character</a></div><div class="ttdoc">Represents a character. A Character can attack an other character.</div><div class="ttdef"><b>Definition:</b> character.h:11</div></div>
+<div class="ttc" id="aclass_map_html_a1b1d492ae94e6ce4f76536bd33d8123c"><div class="ttname"><a href="class_map.html#a1b1d492ae94e6ce4f76536bd33d8123c">Map::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> map.h:22</div></div>
+<div class="ttc" id="aclass_map_html_a6b43adb910b24e775d12d04dcf80d691"><div class="ttname"><a href="class_map.html#a6b43adb910b24e775d12d04dcf80d691">Map::Map</a></div><div class="ttdeci">Map(const std::string &amp;name=&quot;&quot;, const two_d_vector &amp;cells={})</div><div class="ttdef"><b>Definition:</b> map.cpp:5</div></div>
 <div class="ttc" id="aclass_json_parser_html"><div class="ttname"><a href="class_json_parser.html">JsonParser</a></div><div class="ttdoc">Parses a Character from a file, string or a file stream.</div><div class="ttdef"><b>Definition:</b> jsonParser.h:12</div></div>
-<div class="ttc" id="aclass_map_reader_html"><div class="ttname"><a href="class_map_reader.html">MapReader</a></div><div class="ttdef"><b>Definition:</b> mapReader.h:10</div></div>
+<div class="ttc" id="aclass_map_html_a1de0f97b9c754836502997231780fd0b"><div class="ttname"><a href="class_map.html#a1de0f97b9c754836502997231780fd0b">Map::GetName</a></div><div class="ttdeci">std::string GetName()</div><div class="ttdef"><b>Definition:</b> map.cpp:63</div></div>
+<div class="ttc" id="aclass_map_reader_html"><div class="ttname"><a href="class_map_reader.html">MapReader</a></div><div class="ttdoc">Reads a map.</div><div class="ttdef"><b>Definition:</b> mapReader.h:14</div></div>
+<div class="ttc" id="aclass_map_reader_html_a84ff056f166bba98b95afc3443b4a0a6"><div class="ttname"><a href="class_map_reader.html#a84ff056f166bba98b95afc3443b4a0a6">MapReader::ReadMap</a></div><div class="ttdeci">Map ReadMap(std::string fileName)</div><div class="ttdef"><b>Definition:</b> mapReader.cpp:11</div></div>
+<div class="ttc" id="aclass_map_html_a1afc9e2739a9cfe38445e6d3afc721fb"><div class="ttname"><a href="class_map.html#a1afc9e2739a9cfe38445e6d3afc721fb">Map::GetCell</a></div><div class="ttdeci">int GetCell(int row, int column)</div><div class="ttdef"><b>Definition:</b> map.cpp:9</div></div>
+<div class="ttc" id="aclass_map_html_adfc6a2d0c463fb198c610c3614377060"><div class="ttname"><a href="class_map.html#adfc6a2d0c463fb198c610c3614377060">Map::Display</a></div><div class="ttdeci">void Display()</div><div class="ttdef"><b>Definition:</b> map.cpp:13</div></div>
+<div class="ttc" id="aclass_map_html_a78168267ef560ed84f271b5f26a04f33"><div class="ttname"><a href="class_map.html#a78168267ef560ed84f271b5f26a04f33">Map::ClearValue</a></div><div class="ttdeci">void ClearValue(int value)</div><div class="ttdef"><b>Definition:</b> map.cpp:91</div></div>
 <div class="ttc" id="aclass_json_parser_html_ac36bfe7f1bb4200898830c222222df3f"><div class="ttname"><a href="class_json_parser.html#ac36bfe7f1bb4200898830c222222df3f">JsonParser::parseUnitFromFile</a></div><div class="ttdeci">static Character * parseUnitFromFile(std::string fileName)</div><div class="ttdef"><b>Definition:</b> jsonParser.cpp:21</div></div>
+<div class="ttc" id="aclass_map_html_a7aaddaedbcbc69d0ffe2df60a1d14563"><div class="ttname"><a href="class_map.html#a7aaddaedbcbc69d0ffe2df60a1d14563">Map::SetCell</a></div><div class="ttdeci">void SetCell(int row_index, int column_index, int value)</div><div class="ttdef"><b>Definition:</b> map.cpp:59</div></div>
 <div class="ttc" id="aclass_enemy_html"><div class="ttname"><a href="class_enemy.html">Enemy</a></div><div class="ttdoc">Represents an enemy that is derived from Character.</div><div class="ttdef"><b>Definition:</b> enemy.h:12</div></div>
+<div class="ttc" id="aclass_map_html_aa403fbe09394ccf39747588f5168e3b2"><div class="ttname"><a href="class_map.html#aa403fbe09394ccf39747588f5168e3b2">Map::~Map</a></div><div class="ttdeci">~Map()</div><div class="ttdef"><b>Definition:</b> map.cpp:7</div></div>
+<div class="ttc" id="aclass_map_html_a14aebe6d9131d4c3b67cb9bb60668fa8"><div class="ttname"><a href="class_map.html#a14aebe6d9131d4c3b67cb9bb60668fa8">Map::cells</a></div><div class="ttdeci">two_d_vector cells</div><div class="ttdef"><b>Definition:</b> map.h:27</div></div>
 <div class="ttc" id="aclass_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdoc">Represents a player that is derived from Character.</div><div class="ttdef"><b>Definition:</b> player.h:16</div></div>
-<div class="ttc" id="aclass_map_html"><div class="ttname"><a href="class_map.html">Map</a></div><div class="ttdef"><b>Definition:</b> map.h:9</div></div>
-<div class="ttc" id="aclass_game_html"><div class="ttname"><a href="class_game.html">Game</a></div><div class="ttdef"><b>Definition:</b> game.h:11</div></div>
+<div class="ttc" id="aclass_map_html"><div class="ttname"><a href="class_map.html">Map</a></div><div class="ttdoc">Represents a map where the game will be played on.</div><div class="ttdef"><b>Definition:</b> map.h:16</div></div>
+<div class="ttc" id="aclass_game_html"><div class="ttname"><a href="class_game.html">Game</a></div><div class="ttdoc">Represents the logic of the game.</div><div class="ttdef"><b>Definition:</b> game.h:15</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

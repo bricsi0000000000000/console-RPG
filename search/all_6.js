@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jsonparser_15',['JsonParser',['../class_json_parser.html',1,'JsonParser'],['../class_json_parser.html#af21abdfb0ceac731e44d897a0285f5d4',1,'JsonParser::JsonParser()']]]
+  ['isalive_29',['IsAlive',['../class_character.html#a18095520ae360be2d6fa1b2abdf2a2bf',1,'Character']]]
 ];
