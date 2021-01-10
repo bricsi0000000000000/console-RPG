@@ -2,7 +2,7 @@
 
 #include "map.h"
 
-Map::Map(std::string name, two_d_vector cells) : name(name), cells(cells) {}
+Map::Map(const std::string& name, const two_d_vector& cells) : name(name), cells(cells) {}
 
 Map::~Map() {}
 
@@ -25,15 +25,8 @@ void Map::Display(){
       {
         std::cout << '|';
       }
-      else if(row_index == 0 ||
-              row_index == cells.size())
-      {
-        if(row_index == cells.size() && column_index < cells[cells.size() - 1].size()){
-          std::cout << '-';
-        }
-        else if(row_index == 0){
-          std::cout << '-';
-        }
+      else if(row_index == 0){
+        std::cout << '-';
       }
       else{
         if(cells[row_index][column_index] == 0){ // empty
@@ -45,9 +38,21 @@ void Map::Display(){
         else if(cells[row_index][column_index] == 2){ // player
           std::cout << 'o';
         }
+        else if(cells[row_index][column_index] == 3){ // enemy
+          std::cout << 'M';
+        }
       }
     }
     std::cout << '\n';
+  }
+
+  for(int column_index = 0; column_index <= cells[cells.size() - 1].size(); column_index++){
+    if(column_index == 0 || column_index == cells[cells.size() - 1].size()){
+      std::cout << '+';
+    }
+    else{
+      std::cout << '-';
+    }
   }
 }
 
@@ -59,19 +64,20 @@ std::string Map::GetName(){
   return this->name;
 }
 
-bool Map::Move(int character_number, int row_index, int column_index){
+int Map::Move(int character_number, int row_index, int column_index){
   if(row_index <= 0 ||
      row_index >= cells.size() ||
      column_index <= 0 ||
      column_index >= cells[row_index].size())
   {
-    std::cout << "-------Nothing is there------\n";
-    return false;
+    return -1; // nothing
   }
   else{
     if(cells[row_index][column_index] == 1){
-      std::cout << "-------There is a wall-------\n";
-      return false;
+      return 1; // wall
+    }
+    else if(cells[row_index][column_index] == 3){
+      return 3; // enemy
     }
     else if(GetCell(row_index, column_index) == 0){
       ClearValue(character_number);
@@ -79,7 +85,7 @@ bool Map::Move(int character_number, int row_index, int column_index){
     }
   }
 
-  return true;
+  return 0; // all good
 }
 
 void Map::ClearValue(int value){

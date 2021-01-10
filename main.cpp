@@ -1,9 +1,9 @@
 #include <iostream>
 #include <memory>
 
-#include "character.h"
 #include "player.h"
-#include "characterManager.h"
+#include "player.h"
+#include "enemy.h"
 #include "jsonParser.h"
 #include "mapReader.h"
 #include "map.h"
@@ -16,28 +16,38 @@
  * @param argv is an array that contains the arguments. First one is the programs name.
  */
 int main(int argc, char *argv[]){
-
-  CharacterManager characterManager;
   JsonParser parser;
-  int characterNumbers = 2;
 
-  if(argc < 3){
-    std::cerr << "Nincs megadva eleg parameter. Meg kell adnod egy unit-ot és egy map-et.\n";
+  if(argc < 4){
+    std::cerr << "Nincs megadva eleg parameter. Meg kell adnod egy player-t, egy enemyt és egy map-et.\n";
     return 0;
   }
   else {
     try {
-      Character* character = parser.parseUnitFromFile(argv[1]);
-      character->SetNumber(characterNumbers++);
-      characterManager.AddCharacter(character);
-
       MapReader mapReader;
-      Map map = mapReader.ReadMap(argv[2]);
-      map.SetCell(character->GetPositionRow(),
-                  character->GetPositionColumn(),
-                  character->GetNumber());
+      Map map = mapReader.ReadMap(argv[1]);
 
-      Game game(argv[2], map, character);
+      Character* player_character = parser.parseUnitFromFile(argv[2]);
+      Player player(player_character);
+      delete player_character;
+
+      Character* enemy_character = parser.parseUnitFromFile(argv[3]);
+      Enemy enemy(enemy_character);
+      delete enemy_character;
+
+      map.SetCell(player.GetPositionRow(),
+                  player.GetPositionColumn(),
+                  player.GetNumber());
+
+      map.SetCell(enemy.GetPositionRow(),
+                  enemy.GetPositionColumn(),
+                  enemy.GetNumber());
+
+      std::vector<Enemy> enemies;
+      enemies.push_back(enemy);
+
+      Game game(map, &player, enemies);
+
     }
     catch(const std::exception& e){
       std::cerr << e.what() << '\n';

@@ -12,25 +12,22 @@ JsonParser::JsonParser(){}
 JsonParser::~JsonParser(){}
 
 Character* JsonParser::parseUnitFromStream(std::fstream& fileStream){
-  if(fileStream){
     std::string content((std::istreambuf_iterator<char>(fileStream)),
                         (std::istreambuf_iterator<char>()));
-
     fileStream.close();
     return parseUnitFromFileContent(content);
-  }
-  else{
-    throw std::runtime_error("File doesn't exists!");
-  }
-
-  return nullptr;
 }
 
 Character* JsonParser::parseUnitFromFile(std::string fileName){
   std::fstream fileStream;
   fileStream.open(fileName, std::ios::in);
-  
-  return parseUnitFromStream(fileStream);
+
+  if(fileStream){
+    return parseUnitFromStream(fileStream);
+  }
+  else{
+    throw std::runtime_error("File doesn't exists!");
+  }
 }
 
 Character* JsonParser::parseUnitFromFileContent(std::string content){
@@ -91,5 +88,6 @@ Character* JsonParser::parseUnitFromFileContent(std::string content){
                        std::stof(results.find("dmg")->second),
                        std::stof(results.find("attackcooldown")->second),
                        std::stoi(results.find("position_row")->second),
-                       std::stoi(results.find("position_column")->second));
+                       std::stoi(results.find("position_column")->second),
+                       std::stoi(results.find("number")->second));
 }

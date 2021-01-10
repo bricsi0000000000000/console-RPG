@@ -4,7 +4,7 @@
 #include "../character.cpp"
 
 TEST(unitTests, parseCharacterEquals){
-    Character* character1 = new Character("Mapple", 150, 10, 10, 2, 3);
+    Character* character1 = new Character("Mapple", 150, 10, 10, 4, 8, 2);
     Character* character2 = JsonParser::parseUnitFromFile("../units/unit2.json");
 
     ASSERT_EQ(character1->GetName(), character2->GetName());
@@ -14,7 +14,7 @@ TEST(unitTests, parseCharacterEquals){
 }
 
 TEST(unitTests, parseCharacterNotEquals){
-    Character* character1 = new Character("Mapel", 510, 79, 4, 2, 3);
+    Character* character1 = new Character("Mapel", 510, 79, 4, 2, 3, 2);
     Character* character2 = JsonParser::parseUnitFromFile("../units/unit2.json");
 
     ASSERT_NE(character1->GetName(), character2->GetName());
@@ -24,7 +24,7 @@ TEST(unitTests, parseCharacterNotEquals){
 }
 
 TEST(jsonParseTests, parseCharacterMissingCurlyBracket){
-    Character* character1 = new Character("Mapple", 150, 10, 10, 2, 3);
+    Character* character1 = new Character("Mapple", 150, 10, 10, 4, 8, 2);
     Character* character2 = JsonParser::parseUnitFromFile("wrong_units/wrong_unit1.json");
 
     ASSERT_EQ(character1->GetName(), character2->GetName());

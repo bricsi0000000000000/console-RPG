@@ -27,7 +27,19 @@ private:
    * Default level up is 100 xp.
    * When level up happens the maximum health and damage grow by 10%.
   */
-  void LevelUp(int lastXp, int newXp);
+  void LevelUp();
+
+  /**
+   * Experience points that the character has.
+  */
+  unsigned int xp;
+
+  /**
+   * Experience points at level.
+  */
+  unsigned int levelXp;
+
+  int level;
 
 public:
   /**
@@ -42,7 +54,10 @@ public:
          float damage,
          float attackcooldown,
          int position_row,
-         int position_column);
+         int position_column,
+         int number);
+
+  explicit Player(Character* character);
 
   /**
    * Destructor for Player.
@@ -54,6 +69,14 @@ public:
    * Overrides the Characters Attack method by adding gain xp.
   */
   void Attack(Character* opponent) override;
+
+  /**
+   * @return How many xp the character has.
+  */
+  int GetXp() const;
+  int GetLevelXp() const;
+
+  int GetLevel();
 };
 
 #endif //PLAYER_H

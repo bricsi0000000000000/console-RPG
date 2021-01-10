@@ -1,8 +1,9 @@
 {
   "name" : "Kakarott",
   "hp" : 3000,
-  "dmg" : 100,
+  "dmg" : 99,
   "attackcooldown" : 2.8,
   "position_row" : 2,
-  "position_column" : 3
+  "position_column" : 3,
+  "number":2
 }

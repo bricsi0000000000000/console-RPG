@@ -13,13 +13,13 @@ private:
   two_d_vector cells;
   void ClearValue(int value);
 public:
-  Map(std::string name = "", two_d_vector cells = {});
+  Map(const std::string& name = "", const two_d_vector& cells = {});
   ~Map();
   void SetCell(int row_index, int column_index, int value);
   int GetCell(int row, int column);
   void Display();
   std::string GetName();
-  bool Move(int character_number, int row_index, int column_index);
+  int Move(int character_number, int row_index, int column_index);
 };
 
 #endif //MAP_H

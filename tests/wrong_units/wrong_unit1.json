@@ -3,5 +3,6 @@
 "dmg" : 10,
 "attackcooldown" : 10,
 "position_row" : 2,
-"position_column" : 3
+"position_column" : 3,
+"number":3
 }
