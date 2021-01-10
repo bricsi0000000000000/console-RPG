@@ -47,7 +47,6 @@ int main(int argc, char *argv[]){
       enemies.push_back(enemy);
 
       Game game(map, &player, enemies);
-
     }
     catch(const std::exception& e){
       std::cerr << e.what() << '\n';
@@ -57,4 +56,3 @@ int main(int argc, char *argv[]){
   
   return 0;
 }
-
