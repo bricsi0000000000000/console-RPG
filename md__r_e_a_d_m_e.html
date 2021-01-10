@@ -67,21 +67,225 @@ $(function() {
 <div class="title">Konzolos RPG játék </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>A program szimulálja 2 paraméterként kapott karakter párbaját.</p>
+<div class="textblock"><p>Ebben a játékban egy karaktert irányíthatsz és barangolhatsz egy tetszóleges pályán.</p>
+<p>A játék során találkozhatsz ellenfelekkel, amikkel meg tudsz küzdeni.</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
-Program használata</h1>
-<p>A program bemenetként vár 2 <code>json</code> fájlt.</p>
-<p>Példa bemenetre: <code>.\main.exe .\units\unit1.json .\units\unit2.json</code></p>
-<p>Példa kimenetre:</p>
-<p><code>Mapple died. Kakarott wins.</code></p>
+Játék használata</h1>
+<p>A program bemenetként vár 3 fájlt:</p>
+<ol type="1">
+<li>map file</li>
+<li>player file</li>
+<li>enemy file</li>
+</ol>
+<p>Példa bemenetre: <code>./a.out maps/map.csv units/unit1.json units/unit2.json</code></p>
 <h1><a class="anchor" id="autotoc_md2"></a>
-Karakter fájl</h1>
+Játék menete</h1>
+<p>4 irányba tudsz lépni.</p>
+<ul>
+<li>jobbra <code>d</code></li>
+<li>balra <code>a</code></li>
+<li>fel <code>w</code></li>
+<li>le <code>s</code></li>
+</ul>
+<p>Amikor egy olyan mezőre lépsz, ahol egy ellenfél található *(<code>M</code>)*, akkor a van lehetőséged párbajozni vele.</p>
+<p>Ilyenkor a párbaj élet halálra megy.</p>
+<p>A játék akkor tér véget ha meghalsz.</p>
+<p>A játékból kilépni az <code>e</code> betű beírásával lehet.</p>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Fejlesztői rész</h1>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Példa egy karakter fájlra</h2>
 <div class="fragment"><div class="line">{</div>
 <div class="line">  &quot;name&quot; : &quot;Kakarott&quot;,</div>
-<div class="line">  &quot;hp&quot; : 3000000,</div>
-<div class="line">  &quot;dmg&quot; : 100,</div>
-<div class="line">  &quot;attackcooldown&quot; : 2.8</div>
+<div class="line">  &quot;hp&quot; : 3000,</div>
+<div class="line">  &quot;dmg&quot; : 99,</div>
+<div class="line">  &quot;attackcooldown&quot; : 2.8,</div>
+<div class="line">  &quot;position_row&quot; : 2,</div>
+<div class="line">  &quot;position_column&quot; : 3,</div>
+<div class="line">  &quot;number&quot;:2</div>
 <div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md5"></a>
+Példa egy térkép fájlra</h2>
+<div class="fragment"><div class="line">map_1</div>
+<div class="line">0;0;0;0;0;0;0;0;0;0;0;0;0</div>
+<div class="line">0;0;1;1;1;1;0;0;0;0;0;1;0</div>
+<div class="line">0;0;1;2;0;0;0;0;0;0;0;1</div>
+<div class="line">0;0;0;0;0;1;1;1;1;1;0</div>
+<div class="line">0;0;0;0;0;0;0;0;3;1;0</div>
+<div class="line">0;0;0;0;1;1;1;1;1;1;0</div>
+</div><!-- fragment --><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Szám </th><th class="markdownTableHeadNone">Magyarázat </th><th class="markdownTableHeadNone">Lehet -e ide lépni  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">0 </td><td class="markdownTableBodyNone">Üres cella </td><td class="markdownTableBodyNone">igen  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">1 </td><td class="markdownTableBodyNone">Fal </td><td class="markdownTableBodyNone">nem  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">2 </td><td class="markdownTableBodyNone"><a class="el" href="class_player.html" title="Represents a player that is derived from Character.">Player</a> </td><td class="markdownTableBodyNone">nem  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">3 </td><td class="markdownTableBodyNone"><a class="el" href="class_enemy.html" title="Represents an enemy that is derived from Character.">Enemy</a> </td><td class="markdownTableBodyNone">igen  </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Példa egy játékra</h2>
+<p>Itt a játékos a kezdő pozíciójából elment az egyetlen egy ellenfélhez, megtámadta majd megölte. Utána kilépett a játékból.</p>
+<div class="fragment"><div class="line">        Stats</div>
+<div class="line">                Name: Kakarott</div>
+<div class="line">                Health: 3000</div>
+<div class="line">                Attack damage: 99</div>
+<div class="line">                Attack cooldown: 2.8</div>
+<div class="line">                Level: 1</div>
+<div class="line">                Current xp: 0</div>
+<div class="line">                Necessary xp to next level: 100</div>
+<div class="line"> </div>
+<div class="line">+------------+</div>
+<div class="line">| ####     # |</div>
+<div class="line">| #o       #|</div>
+<div class="line">|    ##### |</div>
+<div class="line">|       M# |</div>
+<div class="line">|   ###### |</div>
+<div class="line">+----------+</div>
+<div class="line">Directions: w,a,s,d</div>
+<div class="line">Step:</div>
+<div class="line"> </div>
+<div class="line">        Stats</div>
+<div class="line">                Name: Kakarott</div>
+<div class="line">                Health: 3000</div>
+<div class="line">                Attack damage: 99</div>
+<div class="line">                Attack cooldown: 2.8</div>
+<div class="line">                Level: 1</div>
+<div class="line">                Current xp: 0</div>
+<div class="line">                Necessary xp to next level: 100</div>
+<div class="line"> </div>
+<div class="line">+------------+</div>
+<div class="line">| ####     # |</div>
+<div class="line">| #        #|</div>
+<div class="line">|  o ##### |</div>
+<div class="line">|       M# |</div>
+<div class="line">|   ###### |</div>
+<div class="line">+----------+</div>
+<div class="line">Directions: w,a,s,d</div>
+<div class="line">Step:</div>
+<div class="line"> </div>
+<div class="line">        Stats</div>
+<div class="line">                Name: Kakarott</div>
+<div class="line">                Health: 3000</div>
+<div class="line">                Attack damage: 99</div>
+<div class="line">                Attack cooldown: 2.8</div>
+<div class="line">                Level: 1</div>
+<div class="line">                Current xp: 0</div>
+<div class="line">                Necessary xp to next level: 100</div>
+<div class="line"> </div>
+<div class="line">+------------+</div>
+<div class="line">| ####     # |</div>
+<div class="line">| #        #|</div>
+<div class="line">|    ##### |</div>
+<div class="line">|  o    M# |</div>
+<div class="line">|   ###### |</div>
+<div class="line">+----------+</div>
+<div class="line">Directions: w,a,s,d</div>
+<div class="line">Step:</div>
+<div class="line"> </div>
+<div class="line">        Stats</div>
+<div class="line">                Name: Kakarott</div>
+<div class="line">                Health: 3000</div>
+<div class="line">                Attack damage: 99</div>
+<div class="line">                Attack cooldown: 2.8</div>
+<div class="line">                Level: 1</div>
+<div class="line">                Current xp: 0</div>
+<div class="line">                Necessary xp to next level: 100</div>
+<div class="line"> </div>
+<div class="line">+------------+</div>
+<div class="line">| ####     # |</div>
+<div class="line">| #        #|</div>
+<div class="line">|    ##### |</div>
+<div class="line">|   o   M# |</div>
+<div class="line">|   ###### |</div>
+<div class="line">+----------+</div>
+<div class="line">Directions: w,a,s,d</div>
+<div class="line">Step:</div>
+<div class="line"> </div>
+<div class="line">        Stats</div>
+<div class="line">                Name: Kakarott</div>
+<div class="line">                Health: 3000</div>
+<div class="line">                Attack damage: 99</div>
+<div class="line">                Attack cooldown: 2.8</div>
+<div class="line">                Level: 1</div>
+<div class="line">                Current xp: 0</div>
+<div class="line">                Necessary xp to next level: 100</div>
+<div class="line"> </div>
+<div class="line">+------------+</div>
+<div class="line">| ####     # |</div>
+<div class="line">| #        #|</div>
+<div class="line">|    ##### |</div>
+<div class="line">|    o  M# |</div>
+<div class="line">|   ###### |</div>
+<div class="line">+----------+</div>
+<div class="line">Directions: w,a,s,d</div>
+<div class="line">Step:</div>
+<div class="line"> </div>
+<div class="line">        Stats</div>
+<div class="line">                Name: Kakarott</div>
+<div class="line">                Health: 3000</div>
+<div class="line">                Attack damage: 99</div>
+<div class="line">                Attack cooldown: 2.8</div>
+<div class="line">                Level: 1</div>
+<div class="line">                Current xp: 0</div>
+<div class="line">                Necessary xp to next level: 100</div>
+<div class="line"> </div>
+<div class="line">+------------+</div>
+<div class="line">| ####     # |</div>
+<div class="line">| #        #|</div>
+<div class="line">|    ##### |</div>
+<div class="line">|     o M# |</div>
+<div class="line">|   ###### |</div>
+<div class="line">+----------+</div>
+<div class="line">Directions: w,a,s,d</div>
+<div class="line">Step:</div>
+<div class="line"> </div>
+<div class="line">        Stats</div>
+<div class="line">                Name: Kakarott</div>
+<div class="line">                Health: 3000</div>
+<div class="line">                Attack damage: 99</div>
+<div class="line">                Attack cooldown: 2.8</div>
+<div class="line">                Level: 1</div>
+<div class="line">                Current xp: 0</div>
+<div class="line">                Necessary xp to next level: 100</div>
+<div class="line"> </div>
+<div class="line">+------------+</div>
+<div class="line">| ####     # |</div>
+<div class="line">| #        #|</div>
+<div class="line">|    ##### |</div>
+<div class="line">|      oM# |</div>
+<div class="line">|   ###### |</div>
+<div class="line">+----------+</div>
+<div class="line">Directions: w,a,s,d</div>
+<div class="line">Step:   -------------There is a monster------------</div>
+<div class="line">                Name: Mapple</div>
+<div class="line">                Health: 1500</div>
+<div class="line">                Attack damage: 80</div>
+<div class="line">                Attack cooldown: 2.9</div>
+<div class="line">        Would you like to attack the monster? (y/n)     You won</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">        Stats</div>
+<div class="line">                Name: Kakarott</div>
+<div class="line">                Health: 6991</div>
+<div class="line">                Attack damage: 233.437</div>
+<div class="line">                Attack cooldown: 2.8</div>
+<div class="line">                Level: 10</div>
+<div class="line">                Current xp: 1492</div>
+<div class="line">                Necessary xp to next level: 154</div>
+<div class="line"> </div>
+<div class="line">+------------+</div>
+<div class="line">| ####     # |</div>
+<div class="line">| #        #|</div>
+<div class="line">|    ##### |</div>
+<div class="line">|       o# |</div>
+<div class="line">|   ###### |</div>
+<div class="line">+----------+</div>
+<div class="line">Directions: w,a,s,d</div>
+<div class="line">Step:</div>
+<div class="line">Exiting game..</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
