@@ -92,7 +92,7 @@ $(function() {
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">int</span> level;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="class_player.html#af943c5a392e34a5e4d2d01008265d2b3">Player</a>(std::string&amp; <a class="code" href="class_character.html#a6592c35167738421f3e04ca8808d37db">name</a>,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="class_player.html#a2442a1599cca9a886fdde109a2746bd3">Player</a>(std::string <a class="code" href="class_character.html#a6592c35167738421f3e04ca8808d37db">name</a>,</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> health,</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;         <span class="keywordtype">float</span> <a class="code" href="class_character.html#a73f965fccad59f8d56c9844c5955df56">damage</a>,</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;         <span class="keywordtype">float</span> <a class="code" href="class_character.html#a5e3928300c4835c5c9d90b28caf6779a">attackcooldown</a>,</div>
@@ -100,7 +100,7 @@ $(function() {
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;         <span class="keywordtype">int</span> position_column,</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;         <span class="keywordtype">int</span> number);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="class_player.html#af943c5a392e34a5e4d2d01008265d2b3">Player</a>(<a class="code" href="class_character.html">Character</a>* character);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="class_player.html#a2442a1599cca9a886fdde109a2746bd3">Player</a>(<a class="code" href="class_character.html">Character</a>* character);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="class_player.html#a749d2c00e1fe0f5c2746f7505a58c062">~Player</a>();</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
@@ -117,6 +117,7 @@ $(function() {
 <div class="ttc" id="aclass_character_html"><div class="ttname"><a href="class_character.html">Character</a></div><div class="ttdoc">Represents a character. A Character can attack an other character.</div><div class="ttdef"><b>Definition:</b> character.h:11</div></div>
 <div class="ttc" id="aclass_character_html_a42bf1eb078aa3dd7fe1d7891bbaa3949"><div class="ttname"><a href="class_character.html#a42bf1eb078aa3dd7fe1d7891bbaa3949">Character::currentHealth</a></div><div class="ttdeci">unsigned int currentHealth</div><div class="ttdef"><b>Definition:</b> character.h:38</div></div>
 <div class="ttc" id="aclass_character_html_abf8ea4a4b78c3e3aeccd3345c4073a26"><div class="ttname"><a href="class_character.html#abf8ea4a4b78c3e3aeccd3345c4073a26">Character::maxHealth</a></div><div class="ttdeci">unsigned int maxHealth</div><div class="ttdef"><b>Definition:</b> character.h:33</div></div>
+<div class="ttc" id="aclass_player_html_a2442a1599cca9a886fdde109a2746bd3"><div class="ttname"><a href="class_player.html#a2442a1599cca9a886fdde109a2746bd3">Player::Player</a></div><div class="ttdeci">Player(std::string name, unsigned int health, float damage, float attackcooldown, int position_row, int position_column, int number)</div><div class="ttdef"><b>Definition:</b> player.cpp:6</div></div>
 <div class="ttc" id="aclass_character_html_afbeeee9db703b4493dbe840045c82d1d"><div class="ttname"><a href="class_character.html#afbeeee9db703b4493dbe840045c82d1d">Character::GetAttacked</a></div><div class="ttdeci">unsigned int GetAttacked(Character *opponent)</div><div class="ttdef"><b>Definition:</b> character.cpp:59</div></div>
 <div class="ttc" id="aclass_player_html_adf07691798b87a93c1aa27ba5215fcfe"><div class="ttname"><a href="class_player.html#adf07691798b87a93c1aa27ba5215fcfe">Player::levelXp</a></div><div class="ttdeci">unsigned int levelXp</div><div class="ttdef"><b>Definition:</b> player.h:40</div></div>
 <div class="ttc" id="aclass_character_html_a6592c35167738421f3e04ca8808d37db"><div class="ttname"><a href="class_character.html#a6592c35167738421f3e04ca8808d37db">Character::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> character.h:17</div></div>
@@ -129,7 +130,6 @@ $(function() {
 <div class="ttc" id="aclass_player_html_a749d2c00e1fe0f5c2746f7505a58c062"><div class="ttname"><a href="class_player.html#a749d2c00e1fe0f5c2746f7505a58c062">Player::~Player</a></div><div class="ttdeci">~Player()</div><div class="ttdef"><b>Definition:</b> player.cpp:26</div></div>
 <div class="ttc" id="aclass_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdoc">Represents a player that is derived from Character.</div><div class="ttdef"><b>Definition:</b> player.h:16</div></div>
 <div class="ttc" id="aclass_player_html_a7285866ec71fcd7e9b5ca73bfef0b0d5"><div class="ttname"><a href="class_player.html#a7285866ec71fcd7e9b5ca73bfef0b0d5">Player::xp</a></div><div class="ttdeci">unsigned int xp</div><div class="ttdef"><b>Definition:</b> player.h:35</div></div>
-<div class="ttc" id="aclass_player_html_af943c5a392e34a5e4d2d01008265d2b3"><div class="ttname"><a href="class_player.html#af943c5a392e34a5e4d2d01008265d2b3">Player::Player</a></div><div class="ttdeci">Player(std::string &amp;name, unsigned int health, float damage, float attackcooldown, int position_row, int position_column, int number)</div><div class="ttdef"><b>Definition:</b> player.cpp:6</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
