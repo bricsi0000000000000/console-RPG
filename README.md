@@ -31,6 +31,18 @@ A játék akkor tér véget ha meghalsz.
 
 A játékból kilépni az `e` betű beírásával lehet.
 
+### Jelmagyarázat
+
+| Jel | Magyarázat  |
+| --- | ----------- |
+| +   | pálya széle |
+| -   | pálya széle |
+| \|  | pálya széle |
+|     | üres cella  |
+| #   | fal         |
+| o   | játékos     |
+| M   | ellenfél    |
+
 ## Fejlesztői rész
 
 ### Példa egy karakter fájlra
