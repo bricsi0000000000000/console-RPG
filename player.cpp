@@ -3,7 +3,7 @@
 #include "player.h"
 #include "character.h"
 
-Player::Player(std::string name,
+Player::Player(const std::string& name,
                unsigned int health,
                float damage,
                float attackcooldown,
