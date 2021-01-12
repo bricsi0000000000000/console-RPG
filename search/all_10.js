@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['xp_55',['xp',['../class_player.html#a7285866ec71fcd7e9b5ca73bfef0b0d5',1,'Player']]]
+  ['update_55',['Update',['../class_game.html#a1c5373c68261c54aff03e6abe40fee52',1,'Game']]]
 ];
